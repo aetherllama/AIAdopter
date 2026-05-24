@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Maturity Assessment — AI Adopter</title>
+  <meta name="description" content="Rate your institution across 5 dimensions to discover your AI maturity stage.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+  <div class="header-brand">
+    <span class="icon">◈</span>
+    <span>AI Adopter</span>
+  </div>
+  <nav id="main-nav"></nav>
+  <div class="header-actions">
+    <span class="live-badge">
+      <span class="live-dot"></span>
+      Assessment
+    </span>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav"></nav>
+
+<main class="narrow">
+
+  <!-- Page header -->
+  <div style="text-align:center;padding:40px 0 32px">
+    <div class="hero-eyebrow">Self-Assessment</div>
+    <h1 style="font-size:28px;font-weight:700;color:var(--text);margin-bottom:8px">AI Maturity Assessment</h1>
+    <p style="font-size:14px;color:var(--muted2)">Rate your agreement with each statement on a scale of 1 (Strongly Disagree) to 5 (Strongly Agree).</p>
+  </div>
+
+  <!-- Instructions card -->
+  <div class="card" style="margin-bottom:28px;border-color:var(--accent);background:var(--tag-bg)">
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:20px;flex-shrink:0">💡</span>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--accent2);margin-bottom:4px">Before you begin</div>
+        <p style="font-size:13px;color:var(--muted2)">Answer based on your institution's <strong style="color:var(--text)">current state</strong>, not aspirations. Be honest — the playbook is only as useful as your assessment is accurate. All responses stay in your browser.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="assessment-progress">
+    <div class="assessment-progress-bar">
+      <div class="assessment-progress-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="assessment-progress-label" id="progress-label">Loading questions…</div>
+  </div>
+
+  <!-- Question Area -->
+  <div id="question-area">
+    <div class="question-card" style="text-align:center;padding:48px">
+      <div style="animation:spin 0.8s linear infinite;display:inline-block;font-size:24px;margin-bottom:12px">◎</div>
+      <p style="color:var(--muted2)">Loading assessment…</p>
+    </div>
+  </div>
+
+  <!-- Dimension guide -->
+  <div style="margin-top:32px;padding:16px 0;border-top:1px solid var(--border)">
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Assessment Dimensions</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <span class="question-dimension dim-strategy">◈ Strategy & Governance</span>
+      <span class="question-dimension dim-data">▦ Data & Infrastructure</span>
+      <span class="question-dimension dim-talent">◎ AI Talent & Culture</span>
+      <span class="question-dimension dim-usecases">▲ Use Cases</span>
+      <span class="question-dimension dim-risk">⊕ Risk & Compliance</span>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div>Responses are stored locally in your browser. Nothing is sent to any server.</div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="assessment.js"></script>
+</body>
+</html>

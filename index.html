@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Adopter — AI Adoption Playbook for Financial Institutions</title>
+  <meta name="description" content="Assess your financial institution's AI maturity and get a personalized roadmap to the next stage.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+  <div class="header-brand">
+    <span class="icon">◈</span>
+    <span>AI Adopter</span>
+    <span class="header-tagline">AI Adoption Playbooks for Financial Institutions</span>
+  </div>
+  <nav id="main-nav"></nav>
+  <div class="header-actions">
+    <span class="live-badge">
+      <span class="live-dot"></span>
+      Free Tool
+    </span>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav" id="mobile-nav"></nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="hero-eyebrow">For Banks · Insurers · Asset Managers</div>
+  <h1>Find Your <span>AI Maturity Stage.</span><br>Get Your Roadmap.</h1>
+  <p>A 10-minute self-assessment across 5 dimensions reveals where your institution stands — and generates a tailored playbook to reach the next stage of AI adoption.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="assessment.html" class="btn btn-primary btn-lg">Start Free Assessment →</a>
+    <a href="stages.html" class="btn btn-secondary btn-lg">Explore the Stages</a>
+  </div>
+  <p style="font-size:12px;color:var(--muted);margin-top:16px">No registration required · Results stay in your browser</p>
+</section>
+
+<!-- ============================================================
+     HOW IT WORKS
+     ============================================================ -->
+<main>
+  <div class="section-header" style="margin-bottom:24px">
+    <div>
+      <div class="section-title">How It Works</div>
+      <div class="section-sub">Three steps from assessment to action plan</div>
+    </div>
+  </div>
+
+  <div class="steps-grid" style="margin-bottom:56px">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>Answer 24 Questions</h3>
+      <p>Rate your institution across Strategy, Data, Talent, Use Cases, and Risk & Compliance on a 1–5 scale.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>Discover Your Stage</h3>
+      <p>Your score maps to one of four maturity stages — Exploring, Experimenting, Scaling, or Transforming — with a radar chart showing strengths and gaps.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3>Get Your Playbook</h3>
+      <p>A personalized roadmap with prioritized actions, AI use case recommendations, and a governance checklist for your specific stage transition.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       INSIGHTS BAR
+       ============================================================ -->
+  <div class="insights-bar" style="margin-bottom:48px">
+    <div class="insight-panel">
+      <h3>Common Gaps at Stages 1–2</h3>
+      <ul>
+        <li>No executive sponsor or Chief AI Officer accountable for outcomes</li>
+        <li>Data quality issues blocking first AI pilots from launching</li>
+        <li>Model risk management framework missing or informal</li>
+        <li>AI team headcount too small to sustain concurrent projects</li>
+        <li>Business units not involved in defining AI use cases</li>
+        <li>No clear AI strategy document approved at board level</li>
+      </ul>
+    </div>
+    <div class="insight-panel">
+      <h3>What Stage 3–4 Institutions Do Differently</h3>
+      <ul>
+        <li>MLOps platform enables 10× faster model deployment cycles</li>
+        <li>AI embedded across 5+ business lines with dedicated line AI leads</li>
+        <li>Automated model monitoring catches drift before regulators do</li>
+        <li>AI literacy training extends to front-line and relationship managers</li>
+        <li>Governance frameworks scale — 50+ models managed systematically</li>
+        <li>Proprietary data assets and fine-tuned models create durable AI moats</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MATURITY STAGE PREVIEWS
+       ============================================================ -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">The Four Maturity Stages</div>
+      <div class="section-sub">Where does your institution stand?</div>
+    </div>
+    <a href="stages.html" class="btn btn-ghost btn-sm no-print">See full breakdown →</a>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:56px">
+    <div class="card">
+      <div style="margin-bottom:12px">
+        <span class="stage-badge stage-1">Stage 1</span>
+      </div>
+      <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">Exploring</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Score 0–39</div>
+      <p style="font-size:13px;color:var(--muted2)">AI awareness exists but no systematic strategy, team, or production deployments. Isolated experiments at the margins.</p>
+    </div>
+    <div class="card">
+      <div style="margin-bottom:12px">
+        <span class="stage-badge stage-2">Stage 2</span>
+      </div>
+      <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">Experimenting</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Score 40–59</div>
+      <p style="font-size:13px;color:var(--muted2)">Active pilots in one or two business lines. Small AI team forming. Basic governance in place but scaling is difficult.</p>
+    </div>
+    <div class="card">
+      <div style="margin-bottom:12px">
+        <span class="stage-badge stage-3">Stage 3</span>
+      </div>
+      <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">Scaling</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Score 60–79</div>
+      <p style="font-size:13px;color:var(--muted2)">AI deployed across multiple business lines with MLOps infrastructure, systematic governance, and measurable ROI.</p>
+    </div>
+    <div class="card">
+      <div style="margin-bottom:12px">
+        <span class="stage-badge stage-4">Stage 4</span>
+      </div>
+      <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">Transforming</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Score 80–100</div>
+      <p style="font-size:13px;color:var(--muted2)">AI-first institution with autonomous decisioning, proprietary models, and industry leadership. AI drives competitive advantage.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       DIMENSIONS PREVIEW
+       ============================================================ -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">Five Dimensions Assessed</div>
+      <div class="section-sub">Each scored 0–20 for a total of 100 points</div>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-bottom:56px">
+    <div class="card">
+      <div class="question-dimension dim-strategy" style="margin-bottom:12px">◈ Strategy & Governance</div>
+      <p style="font-size:13px;color:var(--muted2)">Board-approved AI strategy, executive sponsorship, model risk management framework, and ethics oversight.</p>
+    </div>
+    <div class="card">
+      <div class="question-dimension dim-data" style="margin-bottom:12px">▦ Data & Infrastructure</div>
+      <p style="font-size:13px;color:var(--muted2)">Cloud readiness, data pipelines, feature stores, data governance, and real-time inference capability.</p>
+    </div>
+    <div class="card">
+      <div class="question-dimension dim-talent" style="margin-bottom:12px">◎ AI Talent & Culture</div>
+      <p style="font-size:13px;color:var(--muted2)">ML team size, business line AI fluency, upskilling programs, and organizational culture of experimentation.</p>
+    </div>
+    <div class="card">
+      <div class="question-dimension dim-usecases" style="margin-bottom:12px">▲ Use Cases in Production</div>
+      <p style="font-size:13px;color:var(--muted2)">Live deployments vs. pilots, breadth across business lines, MLOps maturity, and measurable business impact.</p>
+    </div>
+    <div class="card">
+      <div class="question-dimension dim-risk" style="margin-bottom:12px">⊕ Risk, Compliance & IP</div>
+      <p style="font-size:13px;color:var(--muted2)">SR 11-7 compliance, EU AI Act readiness, model monitoring, fair lending, and proprietary AI assets.</p>
+    </div>
+    <div class="card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--tag-bg);border-color:var(--accent)">
+      <div style="font-size:28px;margin-bottom:12px">◈</div>
+      <div style="font-size:15px;font-weight:600;color:var(--accent2);margin-bottom:8px">Ready to find your score?</div>
+      <a href="assessment.html" class="btn btn-primary btn-sm">Start Assessment</a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CTA BANNER
+       ============================================================ -->
+  <div class="card" style="text-align:center;padding:48px 24px;border-color:var(--accent);background:linear-gradient(135deg,#0f1f3d,#111827)">
+    <div style="font-size:22px;font-weight:700;color:var(--text);margin-bottom:12px">
+      Your Personalized AI Roadmap Awaits
+    </div>
+    <p style="color:var(--muted2);font-size:14px;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">
+      24 questions. 5 dimensions. One tailored playbook — with specific actions, use case recommendations, and a regulatory checklist built for your stage.
+    </p>
+    <a href="assessment.html" class="btn btn-primary btn-lg">Begin Assessment →</a>
+  </div>
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div>
+    <strong style="color:var(--muted2)">AI Adopter</strong> — Free AI maturity assessment for financial institutions
+  </div>
+  <div class="sources">
+    Framework informed by: SR 11-7 Model Risk Guidance · EU AI Act · NIST AI RMF · McKinsey AI Maturity Research · FINOS · Partnership on AI
+  </div>
+  <div>
+    <a href="https://github.com/aetherllama/ai-finance-monitor" target="_blank">Inspired by AI Finance Monitor</a>
+    · Not financial or legal advice · Results stored locally in your browser only
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

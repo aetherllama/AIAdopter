@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "dimension": "strategy",
+    "dimensionLabel": "Strategy & Governance",
+    "dimensionIcon": "◈",
+    "text": "Our organization has a documented, board-approved AI strategy with defined objectives and KPIs.",
+    "weight": 4
+  },
+  {
+    "id": 2,
+    "dimension": "strategy",
+    "dimensionLabel": "Strategy & Governance",
+    "dimensionIcon": "◈",
+    "text": "We have a dedicated executive sponsor (C-suite or equivalent) accountable for AI adoption outcomes.",
+    "weight": 4
+  },
+  {
+    "id": 3,
+    "dimension": "strategy",
+    "dimensionLabel": "Strategy & Governance",
+    "dimensionIcon": "◈",
+    "text": "A formal model risk management (MRM) framework for AI/ML models is in place and enforced.",
+    "weight": 4
+  },
+  {
+    "id": 4,
+    "dimension": "strategy",
+    "dimensionLabel": "Strategy & Governance",
+    "dimensionIcon": "◈",
+    "text": "We have an AI ethics policy and a cross-functional committee that reviews AI decisions for fairness and bias.",
+    "weight": 4
+  },
+  {
+    "id": 5,
+    "dimension": "strategy",
+    "dimensionLabel": "Strategy & Governance",
+    "dimensionIcon": "◈",
+    "text": "AI initiatives are tracked in a centralized inventory, with documented model purpose, owners, and review cycles.",
+    "weight": 4
+  },
+  {
+    "id": 6,
+    "dimension": "data",
+    "dimensionLabel": "Data & Infrastructure",
+    "dimensionIcon": "▦",
+    "text": "Our data is accessible, well-governed, and documented in a data catalog that AI teams can readily use.",
+    "weight": 4
+  },
+  {
+    "id": 7,
+    "dimension": "data",
+    "dimensionLabel": "Data & Infrastructure",
+    "dimensionIcon": "▦",
+    "text": "We have cloud-based infrastructure capable of training and serving machine learning models at scale.",
+    "weight": 4
+  },
+  {
+    "id": 8,
+    "dimension": "data",
+    "dimensionLabel": "Data & Infrastructure",
+    "dimensionIcon": "▦",
+    "text": "Real-time or near-real-time data pipelines are available for AI model inference in production.",
+    "weight": 4
+  },
+  {
+    "id": 9,
+    "dimension": "data",
+    "dimensionLabel": "Data & Infrastructure",
+    "dimensionIcon": "▦",
+    "text": "We have proprietary data assets (e.g., transaction history, customer behavior signals) that differentiate our AI models.",
+    "weight": 4
+  },
+  {
+    "id": 10,
+    "dimension": "data",
+    "dimensionLabel": "Data & Infrastructure",
+    "dimensionIcon": "▦",
+    "text": "Data quality processes and monitoring are automated, with defined SLAs for data freshness and completeness.",
+    "weight": 4
+  },
+  {
+    "id": 11,
+    "dimension": "talent",
+    "dimensionLabel": "AI Talent & Culture",
+    "dimensionIcon": "◎",
+    "text": "We have a dedicated AI/ML team (data scientists, ML engineers, AI product managers) of meaningful scale.",
+    "weight": 4
+  },
+  {
+    "id": 12,
+    "dimension": "talent",
+    "dimensionLabel": "AI Talent & Culture",
+    "dimensionIcon": "◎",
+    "text": "Business units (not just IT) actively participate in defining and sponsoring AI use cases.",
+    "weight": 4
+  },
+  {
+    "id": 13,
+    "dimension": "talent",
+    "dimensionLabel": "AI Talent & Culture",
+    "dimensionIcon": "◎",
+    "text": "We run structured AI literacy and upskilling programs for non-technical employees across the organization.",
+    "weight": 4
+  },
+  {
+    "id": 14,
+    "dimension": "talent",
+    "dimensionLabel": "AI Talent & Culture",
+    "dimensionIcon": "◎",
+    "text": "Our culture actively supports experimentation — teams are rewarded for learning from failed AI pilots, not penalized.",
+    "weight": 4
+  },
+  {
+    "id": 15,
+    "dimension": "talent",
+    "dimensionLabel": "AI Talent & Culture",
+    "dimensionIcon": "◎",
+    "text": "We successfully attract and retain senior AI talent through competitive compensation, tooling, and interesting problems.",
+    "weight": 4
+  },
+  {
+    "id": 16,
+    "dimension": "usecases",
+    "dimensionLabel": "Use Cases in Production",
+    "dimensionIcon": "▲",
+    "text": "We have multiple AI models deployed in live production systems (not just proofs of concept or pilots).",
+    "weight": 4
+  },
+  {
+    "id": 17,
+    "dimension": "usecases",
+    "dimensionLabel": "Use Cases in Production",
+    "dimensionIcon": "▲",
+    "text": "AI is deployed across multiple business lines (e.g., lending, fraud, trading, customer service) — not just in one area.",
+    "weight": 4
+  },
+  {
+    "id": 18,
+    "dimension": "usecases",
+    "dimensionLabel": "Use Cases in Production",
+    "dimensionIcon": "▲",
+    "text": "We have MLOps tooling and CI/CD pipelines that enable fast, reliable model deployment and monitoring.",
+    "weight": 4
+  },
+  {
+    "id": 19,
+    "dimension": "usecases",
+    "dimensionLabel": "Use Cases in Production",
+    "dimensionIcon": "▲",
+    "text": "AI-generated outcomes (recommendations, decisions, signals) are measurably improving business KPIs.",
+    "weight": 4
+  },
+  {
+    "id": 20,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "Our AI models are validated by an independent model risk function in line with SR 11-7 or equivalent guidelines.",
+    "weight": 4
+  },
+  {
+    "id": 21,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "We have assessed our AI systems against the EU AI Act risk tiers and have remediation plans where required.",
+    "weight": 4
+  },
+  {
+    "id": 22,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "Production AI models are monitored for data drift, performance degradation, and fairness metrics in real time.",
+    "weight": 4
+  },
+  {
+    "id": 23,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "We contribute proprietary AI research, patents, or participate in industry consortia (e.g., FINOS, Partnership on AI).",
+    "weight": 4
+  },
+  {
+    "id": 24,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "Third-party AI vendors and partners are subject to due diligence and ongoing monitoring under our vendor risk framework.",
+    "weight": 4
+  }
+]

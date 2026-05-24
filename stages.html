@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Maturity Stages — AI Adopter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+  <div class="header-brand">
+    <span class="icon">◈</span>
+    <span>AI Adopter</span>
+  </div>
+  <nav id="main-nav"></nav>
+  <div class="header-actions">
+    <span class="live-badge">
+      <span class="live-dot"></span>
+      Framework
+    </span>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav"></nav>
+
+<main>
+  <div style="text-align:center;padding:48px 0 36px">
+    <div class="hero-eyebrow">Maturity Framework</div>
+    <h1 style="font-size:32px;font-weight:700;color:var(--text);margin-bottom:8px">The Four AI Maturity Stages</h1>
+    <p style="font-size:15px;color:var(--muted2);max-width:560px;margin:0 auto">A finance-sector-specific framework measuring AI adoption across five dimensions. Score 0–100 across Strategy, Data, Talent, Use Cases, and Risk & Compliance.</p>
+  </div>
+
+  <!-- Scoring overview -->
+  <div class="insights-bar" style="margin-bottom:40px">
+    <div class="insight-panel">
+      <h3>Five Dimensions — 20 Points Each</h3>
+      <ul>
+        <li>◈ Strategy &amp; Governance — AI strategy, exec sponsorship, ethics</li>
+        <li>▦ Data &amp; Infrastructure — Cloud, pipelines, data quality</li>
+        <li>◎ AI Talent &amp; Culture — Team, literacy, experimentation culture</li>
+        <li>▲ Use Cases in Production — Live deployments, MLOps, ROI</li>
+        <li>⊕ Risk, Compliance &amp; IP — SR 11-7, EU AI Act, model monitoring</li>
+      </ul>
+    </div>
+    <div class="insight-panel">
+      <h3>Stage Classification Thresholds</h3>
+      <ul>
+        <li>Stage 1 — Exploring: Score 0–39</li>
+        <li>Stage 2 — Experimenting: Score 40–59</li>
+        <li>Stage 3 — Scaling: Score 60–79</li>
+        <li>Stage 4 — Transforming: Score 80–100</li>
+        <li>Each dimension scored 1–5 per question, normalized to 0–20</li>
+        <li>24 questions across all 5 dimensions</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Stage 1 -->
+  <div class="stage-card" style="margin-bottom:20px">
+    <div class="stage-card-header">
+      <div>
+        <div class="stage-number">Stage 1</div>
+        <div class="stage-name" style="color:var(--stage1)">Exploring</div>
+        <div class="stage-score-range">Score 0–39 · Early Awareness</div>
+      </div>
+      <span class="stage-badge stage-badge-lg stage-1">Stage 1</span>
+    </div>
+    <div class="stage-card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;flex-wrap:wrap">
+        <div>
+          <h4>Characteristics</h4>
+          <ul class="stage-traits">
+            <li>No formal AI strategy or board-level AI commitment</li>
+            <li>Isolated experiments driven by individuals, not programs</li>
+            <li>Data governance is informal; siloed data lakes</li>
+            <li>No dedicated AI team — borrowed resources from IT</li>
+            <li>AI knowledge concentrated in 1–2 people</li>
+            <li>No production AI deployments; only PoCs or vendor demos</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Typical AI Use Cases</h4>
+          <ul class="stage-traits">
+            <li>Vendor-provided credit scoring (black box)</li>
+            <li>Basic RPA / process automation</li>
+            <li>Chatbot from an off-the-shelf vendor</li>
+            <li>Excel-based predictive analytics</li>
+          </ul>
+          <h4 style="margin-top:16px">Institution Archetype</h4>
+          <ul class="stage-traits">
+            <li>Community banks &amp; credit unions</li>
+            <li>Regional insurers building first digital capabilities</li>
+            <li>Wealth managers just beginning digital transformation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stage 2 -->
+  <div class="stage-card" style="margin-bottom:20px">
+    <div class="stage-card-header">
+      <div>
+        <div class="stage-number">Stage 2</div>
+        <div class="stage-name" style="color:var(--stage2)">Experimenting</div>
+        <div class="stage-score-range">Score 40–59 · Active Pilots</div>
+      </div>
+      <span class="stage-badge stage-badge-lg stage-2">Stage 2</span>
+    </div>
+    <div class="stage-card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+        <div>
+          <h4>Characteristics</h4>
+          <ul class="stage-traits">
+            <li>AI strategy document exists but not yet board-ratified</li>
+            <li>Small AI team forming (3–8 data scientists/ML engineers)</li>
+            <li>1–2 use cases in production; remaining are pilots</li>
+            <li>Basic cloud infrastructure in place for model training</li>
+            <li>Model risk framework adopted but lightly enforced</li>
+            <li>Business lines aware of AI but not deeply engaged</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Typical AI Use Cases</h4>
+          <ul class="stage-traits">
+            <li>Transaction fraud detection (in-house ML)</li>
+            <li>Credit underwriting model (first generation)</li>
+            <li>Customer churn prediction</li>
+            <li>Document extraction for loan processing</li>
+            <li>KYC / CDD automation</li>
+          </ul>
+          <h4 style="margin-top:16px">Institution Archetype</h4>
+          <ul class="stage-traits">
+            <li>Mid-size regional banks ($10B–$100B assets)</li>
+            <li>Super-regional insurers with emerging data science teams</li>
+            <li>Asset managers beginning systematic/quantitative strategies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stage 3 -->
+  <div class="stage-card" style="margin-bottom:20px">
+    <div class="stage-card-header">
+      <div>
+        <div class="stage-number">Stage 3</div>
+        <div class="stage-name" style="color:var(--stage3)">Scaling</div>
+        <div class="stage-score-range">Score 60–79 · Enterprise AI</div>
+      </div>
+      <span class="stage-badge stage-badge-lg stage-3">Stage 3</span>
+    </div>
+    <div class="stage-card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+        <div>
+          <h4>Characteristics</h4>
+          <ul class="stage-traits">
+            <li>Board-approved AI strategy tied to business objectives</li>
+            <li>AI team of 20–60 with MLOps, product, and risk specialists</li>
+            <li>AI deployed across 3+ business lines in production</li>
+            <li>MLOps platform enables rapid, reliable model deployment</li>
+            <li>Automated model monitoring and drift detection</li>
+            <li>Structured AI literacy programs for business users</li>
+            <li>SR 11-7 fully implemented with independent validation</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Typical AI Use Cases</h4>
+          <ul class="stage-traits">
+            <li>Next Best Action (NBA) personalization engine</li>
+            <li>Real-time payments fraud (sub-100ms ML)</li>
+            <li>CECL / loan loss forecasting with ML</li>
+            <li>Algorithmic trading signal generation</li>
+            <li>AI-assisted compliance monitoring</li>
+            <li>Network analytics for fraud rings</li>
+          </ul>
+          <h4 style="margin-top:16px">Institution Archetype</h4>
+          <ul class="stage-traits">
+            <li>Large regional banks ($100B+ assets)</li>
+            <li>Top-25 life insurers with AI Centers of Excellence</li>
+            <li>Systematic hedge funds and quantitative asset managers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stage 4 -->
+  <div class="stage-card" style="margin-bottom:40px">
+    <div class="stage-card-header">
+      <div>
+        <div class="stage-number">Stage 4</div>
+        <div class="stage-name" style="color:var(--stage4)">Transforming</div>
+        <div class="stage-score-range">Score 80–100 · AI-First Institution</div>
+      </div>
+      <span class="stage-badge stage-badge-lg stage-4">Stage 4</span>
+    </div>
+    <div class="stage-card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+        <div>
+          <h4>Characteristics</h4>
+          <ul class="stage-traits">
+            <li>AI-first culture: every product roadmap includes AI by default</li>
+            <li>Chief AI Officer with P&amp;L accountability</li>
+            <li>100+ production AI models across all business lines</li>
+            <li>Autonomous AI decisioning in selected use cases (STP)</li>
+            <li>Proprietary fine-tuned LLMs on institutional data</li>
+            <li>AI patent portfolio; publishing AI research externally</li>
+            <li>Shaping industry standards and regulatory guidance</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Typical AI Use Cases</h4>
+          <ul class="stage-traits">
+            <li>Autonomous loan underwriting (full STP)</li>
+            <li>Sovereign LLM for internal research and compliance</li>
+            <li>Multi-agent AI orchestration across business lines</li>
+            <li>AI-native treasury and ALM management</li>
+            <li>AI platform monetization (BaaS APIs for peers)</li>
+            <li>Correspondent banking network risk analytics</li>
+          </ul>
+          <h4 style="margin-top:16px">Institution Archetype</h4>
+          <ul class="stage-traits">
+            <li>Global systemically important banks (G-SIBs)</li>
+            <li>Leading global insurers with in-house AI labs</li>
+            <li>Top quant funds and AI-native neobanks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="card" style="text-align:center;padding:40px;border-color:var(--accent)">
+    <div style="font-size:18px;font-weight:600;color:var(--text);margin-bottom:10px">
+      Which stage are you?
+    </div>
+    <p style="color:var(--muted2);font-size:14px;margin-bottom:20px">Take the 10-minute assessment to find out — and get your personalized playbook.</p>
+    <a href="assessment.html" class="btn btn-primary btn-lg">Start the Assessment →</a>
+  </div>
+
+</main>
+
+<footer>
+  <div>
+    Framework informed by: SR 11-7 · EU AI Act · NIST AI RMF 1.0 · McKinsey Global AI Survey · FINOS · Partnership on AI
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

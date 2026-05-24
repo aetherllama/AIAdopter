@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Use Cases Library — AI Adopter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+  <div class="header-brand">
+    <span class="icon">◈</span>
+    <span>AI Adopter</span>
+  </div>
+  <nav id="main-nav"></nav>
+  <div class="header-actions">
+    <span class="live-badge">
+      <span class="live-dot"></span>
+      40 Use Cases
+    </span>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav"></nav>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div style="font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap">STAGE:</div>
+  <button class="filter-btn active" data-filter="stage" data-value="all">All</button>
+  <button class="filter-btn" data-filter="stage" data-value="1">Stage 1</button>
+  <button class="filter-btn" data-filter="stage" data-value="2">Stage 2</button>
+  <button class="filter-btn" data-filter="stage" data-value="3">Stage 3</button>
+  <button class="filter-btn" data-filter="stage" data-value="4">Stage 4</button>
+
+  <div style="width:1px;height:20px;background:var(--border);margin:0 4px"></div>
+
+  <div style="font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap">LINE:</div>
+  <button class="filter-btn active" data-filter="line" data-value="all">All</button>
+  <button class="filter-btn" data-filter="line" data-value="Fraud">Fraud</button>
+  <button class="filter-btn" data-filter="line" data-value="Lending">Lending</button>
+  <button class="filter-btn" data-filter="line" data-value="Risk">Risk</button>
+  <button class="filter-btn" data-filter="line" data-value="Compliance">Compliance</button>
+  <button class="filter-btn" data-filter="line" data-value="Trading">Trading</button>
+  <button class="filter-btn" data-filter="line" data-value="Customer">Customer</button>
+  <button class="filter-btn" data-filter="line" data-value="Operations">Operations</button>
+</div>
+
+<main>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+    <div>
+      <div class="section-title">AI Use Cases Library</div>
+      <div class="section-sub" id="case-count">40 use cases across 7 business lines</div>
+    </div>
+    <a href="assessment.html" class="btn btn-primary btn-sm no-print">Get My Recommendations →</a>
+  </div>
+
+  <div class="grid-3" id="use-case-grid">
+    <!-- Loading skeletons — replaced by JS -->
+    <div class="use-case-card"><div class="skeleton" style="height:16px;width:80%;margin-bottom:10px"></div><div class="skeleton" style="height:12px;width:120px;margin-bottom:10px"></div><div class="skeleton" style="height:48px;width:100%"></div></div>
+    <div class="use-case-card"><div class="skeleton" style="height:16px;width:70%;margin-bottom:10px"></div><div class="skeleton" style="height:12px;width:100px;margin-bottom:10px"></div><div class="skeleton" style="height:48px;width:100%"></div></div>
+    <div class="use-case-card"><div class="skeleton" style="height:16px;width:75%;margin-bottom:10px"></div><div class="skeleton" style="height:12px;width:110px;margin-bottom:10px"></div><div class="skeleton" style="height:48px;width:100%"></div></div>
+    <div class="use-case-card"><div class="skeleton" style="height:16px;width:80%;margin-bottom:10px"></div><div class="skeleton" style="height:12px;width:120px;margin-bottom:10px"></div><div class="skeleton" style="height:48px;width:100%"></div></div>
+    <div class="use-case-card"><div class="skeleton" style="height:16px;width:65%;margin-bottom:10px"></div><div class="skeleton" style="height:12px;width:90px;margin-bottom:10px"></div><div class="skeleton" style="height:48px;width:100%"></div></div>
+    <div class="use-case-card"><div class="skeleton" style="height:16px;width:78%;margin-bottom:10px"></div><div class="skeleton" style="height:12px;width:115px;margin-bottom:10px"></div><div class="skeleton" style="height:48px;width:100%"></div></div>
+  </div>
+</main>
+
+<footer>
+  <div>40 use cases across Fraud, Lending, Risk, Compliance, Trading, Customer, and Operations.</div>
+  <div>Not legal, regulatory, or compliance advice. Regulatory notes are for general awareness only.</div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+/* ============================================================
+   use-cases.html inline script
+   ============================================================ */
+
+const BIZ_CLASSES = {
+  Lending:    'biz-lending',
+  Risk:       'biz-risk',
+  Fraud:      'biz-fraud',
+  Compliance: 'biz-compliance',
+  Trading:    'biz-trading',
+  Customer:   'biz-customer',
+  Operations: 'biz-operations',
+};
+
+const STATUS_CLASSES = { live: 'status-live', pilot: 'status-pilot', emerging: 'status-emerging' };
+const STATUS_LABELS  = { live: 'Live', pilot: 'Pilot', emerging: 'Emerging' };
+const COMPLEXITY_COLORS = { Low: 'var(--green)', Medium: 'var(--amber)', High: 'var(--red)' };
+
+let allCases = [];
+let activeStage = 'all';
+let activeLine  = 'all';
+
+async function loadCases() {
+  const res = await fetch('data/use-cases.json');
+  allCases = await res.json();
+  renderCases();
+  bindFilters();
+}
+
+function renderCases() {
+  const filtered = allCases.filter(c => {
+    const stageMatch = activeStage === 'all' || c.stage === parseInt(activeStage);
+    const lineMatch  = activeLine  === 'all' || c.businessLine === activeLine;
+    return stageMatch && lineMatch;
+  });
+
+  document.getElementById('case-count').textContent =
+    `${filtered.length} use case${filtered.length !== 1 ? 's' : ''} shown`;
+
+  if (filtered.length === 0) {
+    document.getElementById('use-case-grid').innerHTML = `
+      <div class="empty-state" style="grid-column:1/-1">
+        <div class="icon">◎</div>
+        <p>No use cases match the selected filters.</p>
+        <button class="btn btn-ghost btn-sm" onclick="resetFilters()">Reset Filters</button>
+      </div>`;
+    return;
+  }
+
+  document.getElementById('use-case-grid').innerHTML = filtered.map(c => `
+    <div class="use-case-card">
+      <div class="use-case-title">${c.title}</div>
+      <div class="use-case-meta">
+        <span class="biz-badge ${BIZ_CLASSES[c.businessLine] || ''}">${c.businessLine}</span>
+        <span class="status-badge ${STATUS_CLASSES[c.status]}">${STATUS_LABELS[c.status]}</span>
+        <span class="stage-badge stage-${c.stage}" style="font-size:10px;padding:2px 8px">Stage ${c.stage}</span>
+        <span style="font-size:11px;color:${COMPLEXITY_COLORS[c.complexity]}">● ${c.complexity}</span>
+      </div>
+      <div class="use-case-desc">${c.description}</div>
+      ${c.regNote ? `
+        <div style="font-size:11px;color:var(--muted);border-top:1px solid var(--border);padding-top:8px;margin-top:4px">
+          ⚖ ${c.regNote}
+        </div>` : ''}
+    </div>
+  `).join('');
+}
+
+function bindFilters() {
+  document.querySelectorAll('[data-filter="stage"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-filter="stage"]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeStage = btn.dataset.value;
+      renderCases();
+    });
+  });
+
+  document.querySelectorAll('[data-filter="line"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-filter="line"]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeLine = btn.dataset.value;
+      renderCases();
+    });
+  });
+}
+
+function resetFilters() {
+  activeStage = 'all';
+  activeLine  = 'all';
+  document.querySelectorAll('[data-filter="stage"]').forEach(b => b.classList.toggle('active', b.dataset.value === 'all'));
+  document.querySelectorAll('[data-filter="line"]').forEach(b => b.classList.toggle('active', b.dataset.value === 'all'));
+  renderCases();
+}
+
+document.addEventListener('DOMContentLoaded', loadCases);
+</script>
+</body>
+</html>

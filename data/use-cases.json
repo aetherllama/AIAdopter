@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "title": "Transaction Fraud Detection",
+    "businessLine": "Fraud",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "Real-time ML scoring of card and ACH transactions to flag anomalous activity before authorization. Reduces false positives by 30–50% vs. rules-only systems.",
+    "regNote": "Model validation per SR 11-7 required; fair lending review if decisioning affects protected classes."
+  },
+  {
+    "id": 2,
+    "title": "Application Fraud Screening",
+    "businessLine": "Fraud",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "Identity and synthetic identity fraud detection at account opening using graph ML and device intelligence signals.",
+    "regNote": "FCRA, ECOA considerations; adverse action notices may be required."
+  },
+  {
+    "id": 3,
+    "title": "Credit Underwriting Model",
+    "businessLine": "Lending",
+    "stage": 2,
+    "status": "live",
+    "complexity": "High",
+    "description": "ML-based credit risk scoring for consumer or SME lending, incorporating alternative data signals alongside traditional bureau data.",
+    "regNote": "ECOA/Reg B adverse action, fair lending disparate impact testing, SR 11-7 model risk management."
+  },
+  {
+    "id": 4,
+    "title": "Early Warning System (EWS)",
+    "businessLine": "Risk",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "Predictive monitoring of commercial loan portfolio health to flag deteriorating credits 90–180 days before default.",
+    "regNote": "Stress testing integration; model validation required under SR 11-7."
+  },
+  {
+    "id": 5,
+    "title": "AML Transaction Monitoring",
+    "businessLine": "Compliance",
+    "stage": 2,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "Augment rules-based AML systems with unsupervised ML clustering to surface novel money laundering typologies and reduce alert fatigue.",
+    "regNote": "FinCEN guidance on AI in BSA/AML; explainability required for SAR decisions."
+  },
+  {
+    "id": 6,
+    "title": "Customer Churn Prediction",
+    "businessLine": "Customer",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Low",
+    "description": "Propensity model predicting deposit and card customer attrition 30–60 days ahead, enabling proactive retention offers.",
+    "regNote": "Ensure retention offers comply with fair lending — don't offer better terms only to certain demographics."
+  },
+  {
+    "id": 7,
+    "title": "Next Best Action (NBA) Engine",
+    "businessLine": "Customer",
+    "stage": 3,
+    "status": "live",
+    "complexity": "High",
+    "description": "Real-time personalization engine recommending the optimal product, offer, or service action for each customer across all channels.",
+    "regNote": "Fair lending disparate impact analysis on offer targeting; CAN-SPAM for email channels."
+  },
+  {
+    "id": 8,
+    "title": "AI-Powered Chatbot / Virtual Assistant",
+    "businessLine": "Customer",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "LLM-powered conversational AI for customer service, handling routine inquiries, account management, and guided product discovery.",
+    "regNote": "UDAAP risk on AI-generated advice; disclosure of AI identity; call recording compliance."
+  },
+  {
+    "id": 9,
+    "title": "Document Intelligence (Loan Processing)",
+    "businessLine": "Lending",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "Computer vision and NLP to auto-extract, classify, and validate documents in mortgage and commercial loan origination.",
+    "regNote": "Human-in-the-loop required for high-stakes decisions; audit trail for adverse decisions."
+  },
+  {
+    "id": 10,
+    "title": "Regulatory Report Automation",
+    "businessLine": "Compliance",
+    "stage": 2,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "NLP and workflow automation to generate DFAST/CCAR narratives, FR Y-14 schedules, and CRA analyses with reduced human effort.",
+    "regNote": "Human sign-off mandatory; model validation for stress test models."
+  },
+  {
+    "id": 11,
+    "title": "Algorithmic Trading Signal Generation",
+    "businessLine": "Trading",
+    "stage": 3,
+    "status": "live",
+    "complexity": "High",
+    "description": "ML models that identify alpha signals from alternative data (satellite imagery, sentiment, news flow) for systematic trading strategies.",
+    "regNote": "Market manipulation safeguards; SEC/FINRA algo trading requirements; model testing protocols."
+  },
+  {
+    "id": 12,
+    "title": "Portfolio Risk Stress Testing",
+    "businessLine": "Risk",
+    "stage": 3,
+    "status": "live",
+    "complexity": "High",
+    "description": "Deep learning models for scenario-based market risk simulation, replacing or augmenting Monte Carlo approaches for faster VaR/ES computation.",
+    "regNote": "Basel III/IV model validation; SR 11-7; Federal Reserve stress test submission requirements."
+  },
+  {
+    "id": 13,
+    "title": "Climate Risk Scoring",
+    "businessLine": "Risk",
+    "stage": 3,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "Physical and transition risk scoring for loan and investment portfolios using geospatial ML and climate scenario models.",
+    "regNote": "Fed climate scenario analysis guidance; SEC climate disclosure rules; TCFD alignment."
+  },
+  {
+    "id": 14,
+    "title": "Insider Threat Detection",
+    "businessLine": "Compliance",
+    "stage": 3,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "Behavioral ML models analyzing employee activity patterns (trading, communication, access logs) to detect policy violations and potential fraud.",
+    "regNote": "Employee privacy laws (GDPR, state laws); legal hold-off review before investigations; HR involvement."
+  },
+  {
+    "id": 15,
+    "title": "Smart Collections Prioritization",
+    "businessLine": "Lending",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "ML propensity models to prioritize collection outreach and predict optimal contact timing, channel, and settlement offer.",
+    "regNote": "FDCPA compliance; UDAAP review of AI-driven settlement offers; do-not-call list integration."
+  },
+  {
+    "id": 16,
+    "title": "CECL / Loan Loss Reserve Forecasting",
+    "businessLine": "Risk",
+    "stage": 3,
+    "status": "live",
+    "complexity": "High",
+    "description": "ML-enhanced probability-of-default (PD) and loss-given-default (LGD) models for more accurate expected credit loss estimation under ASC 326.",
+    "regNote": "FASB ASC 326; auditor review required; model validation documentation critical."
+  },
+  {
+    "id": 17,
+    "title": "AI-Assisted Compliance Monitoring",
+    "businessLine": "Compliance",
+    "stage": 3,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "NLP models that continuously scan communications (emails, chat, voice transcripts) for policy breaches, escalations, and regulatory keywords.",
+    "regNote": "SEC/FINRA communications surveillance requirements; GDPR data minimization for voice data."
+  },
+  {
+    "id": 18,
+    "title": "Dynamic Pricing & Rate Optimization",
+    "businessLine": "Lending",
+    "stage": 3,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "Reinforcement learning models that dynamically set deposit rates, loan pricing, and fee structures to optimize net interest margin and competitive positioning.",
+    "regNote": "Reg Z/TILA disclosure requirements; fair lending disparate impact testing mandatory."
+  },
+  {
+    "id": 19,
+    "title": "Real-Time Liquidity Forecasting",
+    "businessLine": "Risk",
+    "stage": 3,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "ML models predicting intraday and 30-day liquidity positions using behavioral deposit models and payment flow patterns.",
+    "regNote": "LCR/NSFR reporting; DFAST liquidity scenario integration; model validation."
+  },
+  {
+    "id": 20,
+    "title": "Autonomous Underwriting (STP)",
+    "businessLine": "Lending",
+    "stage": 4,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "Fully automated straight-through processing for eligible consumer and SME credit applications, with AI making final decisioning without human review.",
+    "regNote": "Adverse action rights; ECOA/FCRA; CFPB guidance on automated decisioning; UDAAP."
+  },
+  {
+    "id": 21,
+    "title": "AI-Native Treasury Management",
+    "businessLine": "Trading",
+    "stage": 4,
+    "status": "emerging",
+    "complexity": "High",
+    "description": "AI orchestration of asset-liability management, FX hedging, and investment portfolio rebalancing with minimal human intervention.",
+    "regNote": "Investment Advisers Act (if applicable); fiduciary duty considerations; senior management accountability."
+  },
+  {
+    "id": 22,
+    "title": "Generative AI for Research & Insights",
+    "businessLine": "Trading",
+    "stage": 3,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "LLM-powered research assistants generating market commentaries, earnings call summaries, and investment memos from structured and unstructured data.",
+    "regNote": "SEC regulations on investment advice; hallucination risk controls; human editorial review required."
+  },
+  {
+    "id": 23,
+    "title": "KYC / CDD Automation",
+    "businessLine": "Compliance",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "AI-powered know-your-customer workflows automating entity resolution, document verification, and risk rating for onboarding and periodic reviews.",
+    "regNote": "FinCEN CDD Rule; OFAC screening integration; human review for high-risk ratings."
+  },
+  {
+    "id": 24,
+    "title": "Intelligent Process Automation (IPA)",
+    "businessLine": "Operations",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Low",
+    "description": "Combining RPA with ML and NLP to automate complex back-office workflows such as exception handling, reconciliations, and data entry.",
+    "regNote": "Audit trail requirements; change management for SOX-controlled processes."
+  },
+  {
+    "id": 25,
+    "title": "Predictive Maintenance (ATMs/Infrastructure)",
+    "businessLine": "Operations",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "IoT sensor data + ML to predict ATM failures, branch equipment downtime, and IT infrastructure issues before they impact customers.",
+    "regNote": "Vendor access controls; BCBS 239 data governance if using risk infrastructure data."
+  },
+  {
+    "id": 26,
+    "title": "AI-Driven Personalized Financial Advice",
+    "businessLine": "Customer",
+    "stage": 4,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "Personalized financial planning recommendations powered by LLMs, customer financial data, and life event signals — delivered at scale.",
+    "regNote": "Investment Advisers Act; fiduciary duty; CFPB guidance; suitability requirements."
+  },
+  {
+    "id": 27,
+    "title": "Network Analytics for Fraud",
+    "businessLine": "Fraud",
+    "stage": 3,
+    "status": "live",
+    "complexity": "High",
+    "description": "Graph neural networks analyzing transaction networks to detect organized fraud rings, mule accounts, and first-party fraud patterns invisible to per-account models.",
+    "regNote": "Data sharing agreements for consortium analytics; privacy considerations."
+  },
+  {
+    "id": 28,
+    "title": "AI Model Risk Monitoring Dashboard",
+    "businessLine": "Risk",
+    "stage": 3,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "Centralized platform monitoring all deployed AI/ML models for performance drift, fairness metrics, and regulatory compliance status in real time.",
+    "regNote": "SR 11-7 ongoing monitoring requirement; board-level reporting for material models."
+  },
+  {
+    "id": 29,
+    "title": "Conversational AI for Branch Staff",
+    "businessLine": "Customer",
+    "stage": 3,
+    "status": "pilot",
+    "complexity": "Medium",
+    "description": "Internal AI copilot giving branch and relationship managers real-time product recommendations, customer insights, and compliance guidance during client interactions.",
+    "regNote": "UDAAP on AI-generated recommendations; licensing requirements if advice qualifies as investment guidance."
+  },
+  {
+    "id": 30,
+    "title": "Synthetic Data Generation",
+    "businessLine": "Risk",
+    "stage": 3,
+    "status": "emerging",
+    "complexity": "High",
+    "description": "Generate privacy-preserving synthetic customer and transaction datasets for model training, stress testing, and vendor sharing without exposing PII.",
+    "regNote": "GLBA, CCPA, GDPR considerations; validate synthetic data fidelity before use in regulatory models."
+  },
+  {
+    "id": 31,
+    "title": "AI-Powered M&A Due Diligence",
+    "businessLine": "Operations",
+    "stage": 4,
+    "status": "emerging",
+    "complexity": "High",
+    "description": "LLM-based contract analysis, risk flag extraction, and financial data room review to accelerate M&A and partnership due diligence cycles.",
+    "regNote": "Attorney-client privilege for legal review; document confidentiality; data room access controls."
+  },
+  {
+    "id": 32,
+    "title": "Cross-Sell Propensity Scoring",
+    "businessLine": "Customer",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Low",
+    "description": "ML models scoring existing customers on likelihood to purchase additional products (savings, insurance, investment), enabling targeted outreach.",
+    "regNote": "Fair lending review of targeting criteria; CAN-SPAM; opt-out compliance."
+  },
+  {
+    "id": 33,
+    "title": "Real-Time Payments Fraud",
+    "businessLine": "Fraud",
+    "stage": 3,
+    "status": "live",
+    "complexity": "High",
+    "description": "Sub-100ms ML decisioning for RTP and FedNow instant payment fraud detection, balancing precision against the irreversibility of real-time payments.",
+    "regNote": "Nacha/FedNow operating rules; Reg E dispute handling; consumer liability limits."
+  },
+  {
+    "id": 34,
+    "title": "Voice Biometrics / Fraud Prevention",
+    "businessLine": "Fraud",
+    "stage": 3,
+    "status": "live",
+    "complexity": "Medium",
+    "description": "Passive voice authentication in IVR and call center to verify customer identity and detect deepfake voice attacks in real time.",
+    "regNote": "BIPA (Illinois Biometric Privacy Act); GDPR; state biometric privacy laws; explicit consent required."
+  },
+  {
+    "id": 35,
+    "title": "Sovereign AI / Private LLM Deployment",
+    "businessLine": "Operations",
+    "stage": 4,
+    "status": "emerging",
+    "complexity": "High",
+    "description": "Fine-tuned or privately hosted large language models on institution's own infrastructure, enabling generative AI applications without data egress to third-party providers.",
+    "regNote": "Third-party risk management (TPRM) for model providers; OCC guidance on AI; data residency requirements."
+  },
+  {
+    "id": 36,
+    "title": "ESG Scoring & Reporting",
+    "businessLine": "Compliance",
+    "stage": 3,
+    "status": "pilot",
+    "complexity": "Medium",
+    "description": "ML models ingesting unstructured ESG disclosures, news, and supply chain data to compute ESG scores for portfolio companies and loan counterparties.",
+    "regNote": "SEC climate disclosure rules; EU SFDR; greenwashing risk; data vendor due diligence."
+  },
+  {
+    "id": 37,
+    "title": "AI-Assisted Regulatory Change Management",
+    "businessLine": "Compliance",
+    "stage": 3,
+    "status": "pilot",
+    "complexity": "Medium",
+    "description": "NLP-powered monitoring of regulatory filings, agency publications, and legislative databases to auto-classify new rules, assess impact, and trigger remediation workflows.",
+    "regNote": "Human legal review required; cannot fully automate compliance interpretation."
+  },
+  {
+    "id": 38,
+    "title": "Correspondent Banking Risk Analytics",
+    "businessLine": "Compliance",
+    "stage": 4,
+    "status": "emerging",
+    "complexity": "High",
+    "description": "Network and ML analytics for correspondent and nostro/vostro relationship risk, identifying high-risk jurisdictions and flagging unusual payment flows at the network level.",
+    "regNote": "OFAC; FinCEN Section 314; Wolfsberg Group guidance; de-risking considerations."
+  },
+  {
+    "id": 39,
+    "title": "Collateral Valuation AI",
+    "businessLine": "Lending",
+    "stage": 3,
+    "status": "pilot",
+    "complexity": "High",
+    "description": "Automated valuation models (AVMs) and computer vision analysis of property images to supplement or replace traditional appraisals in mortgage origination.",
+    "regNote": "FIRREA appraisal requirements; GSE (Fannie/Freddie) AVM acceptance criteria; fair housing review."
+  },
+  {
+    "id": 40,
+    "title": "AI-Powered Expense & Invoice Fraud",
+    "businessLine": "Operations",
+    "stage": 2,
+    "status": "live",
+    "complexity": "Low",
+    "description": "ML models detecting duplicate, inflated, or fictitious vendor invoices and employee expense claims in AP and T&E workflows.",
+    "regNote": "SOX controls for finance processes; audit committee reporting."
+  }
+]
