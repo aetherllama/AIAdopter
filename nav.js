@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: 'assessment.html',  label: 'Self-Assessment' },
   { href: 'stages.html',      label: 'Maturity Stages' },
   { href: 'use-cases.html',   label: 'AI Use Cases' },
+  { href: 'mindforge.html',   label: '⬡ MAS MindForge' },
 ];
 
 function initNav() {

@@ -156,7 +156,7 @@
     "dimension": "risk",
     "dimensionLabel": "Risk, Compliance & IP",
     "dimensionIcon": "⊕",
-    "text": "Our AI models are validated by an independent model risk function in line with SR 11-7 or equivalent guidelines.",
+    "text": "Our AI models are validated by an independent model risk function aligned with SR 11-7, MAS MindForge, or equivalent guidelines.",
     "weight": 4
   },
   {
@@ -164,7 +164,7 @@
     "dimension": "risk",
     "dimensionLabel": "Risk, Compliance & IP",
     "dimensionIcon": "⊕",
-    "text": "We have assessed our AI systems against the EU AI Act risk tiers and have remediation plans where required.",
+    "text": "We apply the FEAT principles (Fairness, Ethics, Accountability, Transparency) to all AI systems, with measurable metrics defined and tracked for each.",
     "weight": 4
   },
   {
@@ -180,7 +180,7 @@
     "dimension": "risk",
     "dimensionLabel": "Risk, Compliance & IP",
     "dimensionIcon": "⊕",
-    "text": "We contribute proprietary AI research, patents, or participate in industry consortia (e.g., FINOS, Partnership on AI).",
+    "text": "We maintain a centralized, documented inventory of all AI systems — including internal, third-party, and open-source — with risk materiality classifications.",
     "weight": 4
   },
   {
@@ -188,7 +188,39 @@
     "dimension": "risk",
     "dimensionLabel": "Risk, Compliance & IP",
     "dimensionIcon": "⊕",
-    "text": "Third-party AI vendors and partners are subject to due diligence and ongoing monitoring under our vendor risk framework.",
+    "text": "Third-party AI vendors and partners are subject to formal due diligence, contractual AI risk protections, and ongoing performance monitoring.",
+    "weight": 4
+  },
+  {
+    "id": 25,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "Each AI use case is assessed for risk materiality using structured criteria — such as Impact, Complexity, and Reliance — and controls are calibrated proportionately.",
+    "weight": 4
+  },
+  {
+    "id": 26,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "Our generative AI deployments have specific controls for hallucination detection, prompt injection prevention, and training data leakage safeguards.",
+    "weight": 4
+  },
+  {
+    "id": 27,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "AI risk responsibilities are clearly assigned across three lines of defence — business (1st line), risk/compliance (2nd line), and internal audit (3rd line).",
+    "weight": 4
+  },
+  {
+    "id": 28,
+    "dimension": "risk",
+    "dimensionLabel": "Risk, Compliance & IP",
+    "dimensionIcon": "⊕",
+    "text": "For any agentic AI systems in use, we have defined guardrails, boundary constraints, and human escalation protocols to ensure autonomous actions remain within safe limits.",
     "weight": 4
   }
 ]

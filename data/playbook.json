@@ -5,117 +5,135 @@
       "fromLabel": "Exploring",
       "toStage": 2,
       "toLabel": "Experimenting",
-      "summary": "You're in the early stages of AI adoption — aware of the opportunity but without structured programs or production deployments. The path to Stage 2 is about establishing foundations: governance, a small team, and your first real pilots.",
+      "summary": "You're in the early stages of AI adoption — aware of the opportunity but without structured programs or production deployments. The path to Stage 2 is about establishing foundations: governance, a small team, and your first real pilots. For MAS-regulated institutions, this stage is also where MindForge baseline compliance begins.",
       "actions": [
         {
           "title": "Appoint an AI Program Lead or Chief AI Officer",
           "effort": "Quick Win",
           "impact": "High",
-          "description": "Designate a senior owner accountable for the AI adoption roadmap. This person bridges business, technology, and risk — and is your first visible signal of executive commitment.",
+          "description": "Designate a senior owner accountable for the AI adoption roadmap. This person bridges business, technology, and risk — and satisfies MindForge's requirement for clear AI oversight roles and board-level accountability (Consideration 1).",
           "dimension": "strategy"
         },
         {
-          "title": "Draft a 12-Month AI Strategy Document",
+          "title": "Draft a 12-Month AI Strategy with FEAT Principles Embedded",
           "effort": "Medium",
           "impact": "High",
-          "description": "Produce a concise strategy document identifying 3–5 priority AI use cases, required capabilities, and success metrics. Secure board or executive committee sign-off.",
+          "description": "Produce a board-approved AI strategy identifying 3–5 priority use cases, required capabilities, and success metrics. Embed MAS FEAT principles (Fairness, Ethics, Accountability, Transparency) as explicit design criteria for every use case.",
           "dimension": "strategy"
         },
         {
-          "title": "Establish a Basic Model Risk Management Policy",
+          "title": "Establish a Model Risk Management Policy (MindForge-Aligned)",
           "effort": "Medium",
           "impact": "High",
-          "description": "Adopt a lightweight MRM framework aligned with SR 11-7. Define what constitutes a 'model', who validates it, and the minimum documentation requirements for any AI/ML system.",
+          "description": "Adopt an MRM framework aligned with SR 11-7 and MAS MindForge Consideration 3. Define what constitutes a 'model', who validates it, and minimum documentation requirements. Include AI-specific risk categories: accuracy, fairness, explainability, robustness.",
           "dimension": "risk"
         },
         {
           "title": "Run a Data Readiness Assessment",
           "effort": "Quick Win",
           "impact": "High",
-          "description": "Audit your top 3 priority use cases for data availability, quality, and accessibility. Identify the #1 data gap blocking your first AI pilot and assign an owner to close it within 90 days.",
+          "description": "Audit your top 3 priority use cases for data availability, quality, and accessibility. MindForge Consideration 8 (data usage compatibility) requires assessing whether training data is representative, consent-compliant, and free from biases that could violate FEAT principles.",
           "dimension": "data"
         },
         {
           "title": "Hire 2–3 Foundational AI/ML Roles",
           "effort": "Strategic",
           "impact": "High",
-          "description": "Recruit a data scientist, ML engineer, and AI product manager as your founding AI team. Partner with a staffing firm specializing in fintech/AI talent if needed.",
+          "description": "Recruit a data scientist, ML engineer, and AI product manager as your founding AI team. MindForge Consideration 16 (AI governance skills and culture) requires organizations to actively build AI literacy across all three lines of defence.",
           "dimension": "talent"
         },
         {
-          "title": "Launch Your First AI Pilot in One Business Line",
+          "title": "Launch Your First AI Pilot with MindForge Use Case Assessment",
           "effort": "Medium",
           "impact": "High",
-          "description": "Select the highest-ROI, lowest-risk use case (e.g., fraud scoring, document extraction, or churn prediction) and run a time-boxed 90-day pilot with clear success criteria.",
+          "description": "Select your first pilot use case and apply MindForge Consideration 7 (use case context and design compatibility) — assess fit with business objectives, potential harms, and appropriate human oversight requirements before development begins.",
           "dimension": "usecases"
         },
         {
-          "title": "Create an AI Use Case Intake Process",
+          "title": "Create a MindForge-Ready AI Use Case Intake Process",
           "effort": "Quick Win",
           "impact": "Medium",
-          "description": "Set up a simple intake form and review process that business units use to submit AI ideas. Prevents ungoverned shadow AI and surfaces hidden opportunities.",
+          "description": "Build an intake form requiring business units to document: business purpose, customer impact, data sources, proposed human oversight level, and initial materiality assessment (Impact / Complexity / Reliance). Prevents ungoverned shadow AI.",
           "dimension": "strategy"
         },
         {
-          "title": "Begin AI Ethics and Bias Awareness Training",
+          "title": "Begin FEAT Principles and AI Ethics Training",
           "effort": "Quick Win",
           "impact": "Medium",
-          "description": "Roll out a 2-hour awareness module on responsible AI, algorithmic bias, and regulatory expectations to your data, technology, risk, and compliance teams.",
+          "description": "Roll out a 2-hour awareness module on responsible AI, MAS FEAT principles, algorithmic bias, and regulatory expectations to data, technology, risk, and compliance teams. MindForge Consideration 16 mandates building AI governance skills organization-wide.",
           "dimension": "talent"
         }
       ],
       "governance": [
         {
-          "text": "Adopt SR 11-7 model risk management guidance",
-          "detail": "Federal Reserve / OCC model risk guidance — mandatory for bank models. Define model tiers, validation requirements, and model inventory.",
-          "reg": "SR 11-7 / OCC 2011-12",
+          "text": "Initiate MAS MindForge gap assessment against all 17 Considerations",
+          "detail": "MindForge is the MAS AI Risk Management Toolkit for financial institutions. Assess your current state against each Consideration across the four sections: Scope & Oversight, AI Risk Management, AI Lifecycle Management, and Enablers.",
+          "reg": "MAS Project MindForge (2026) / MAS AI Risk Management Guidelines",
           "priority": "High"
         },
         {
-          "text": "Register all AI/ML models in a model inventory",
-          "detail": "Even a spreadsheet is a start. Track model purpose, owner, data sources, last validation date, and business impact tier.",
-          "reg": "SR 11-7",
+          "text": "Establish AI governance structure with board-level accountability",
+          "detail": "MindForge Consideration 1: Define AI governance operating model. Board must approve AI strategy and risk appetite. Designate AI governance function with clear mandate and escalation paths.",
+          "reg": "MAS MindForge Consideration 1 / MAS FEAT Accountability Principle",
+          "priority": "High"
+        },
+        {
+          "text": "Adopt SR 11-7 / MindForge-aligned model risk management guidance",
+          "detail": "Federal Reserve SR 11-7 and MAS MindForge both require model inventory, independent validation, and ongoing monitoring. Align your MRM framework to cover both jurisdictions if globally operating.",
+          "reg": "SR 11-7 / OCC 2011-12 / MAS MindForge Consideration 5",
+          "priority": "High"
+        },
+        {
+          "text": "Register all AI/ML systems in a centralized AI inventory",
+          "detail": "MindForge Consideration 6 mandates a comprehensive inventory of all AI systems — internal, third-party, and open-source. Document: purpose, owner, data sources, materiality classification, last review date.",
+          "reg": "MAS MindForge Consideration 6 / SR 11-7",
           "priority": "High"
         },
         {
           "text": "Document adverse action processes for any ML credit model",
-          "detail": "If any ML output can influence a credit decision, you need adverse action notices compliant with ECOA/Reg B.",
-          "reg": "ECOA / Reg B / FCRA",
+          "detail": "If any ML output can influence a credit decision, you need adverse action notices compliant with ECOA/Reg B. MAS FEAT Fairness principle requires fair outcomes for protected demographic groups.",
+          "reg": "ECOA / Reg B / FCRA / MAS FEAT Fairness Principle",
           "priority": "High"
         },
         {
           "text": "Begin EU AI Act gap assessment",
-          "detail": "Classify your AI systems by risk tier (unacceptable, high, limited, minimal). High-risk financial AI requires conformity assessments.",
+          "detail": "Classify your AI systems by risk tier (unacceptable, high, limited, minimal). High-risk financial AI requires conformity assessments. Complements MindForge's proportionality-based materiality assessment.",
           "reg": "EU AI Act (2024)",
           "priority": "Medium"
         },
         {
-          "text": "Establish vendor AI due diligence checklist",
-          "detail": "Any AI product purchased from a vendor falls under your MRM framework. Require vendors to provide model cards, validation reports, and performance data.",
-          "reg": "OCC Third-Party Risk Guidance (2023)",
+          "text": "Establish vendor AI due diligence checklist (MindForge Consideration 4 & 10)",
+          "detail": "MindForge Consideration 4 requires enhancing third-party AI risk management. Require vendors to provide model cards, validation reports, performance SLAs, and data governance attestations. Include contractual exit strategies.",
+          "reg": "MAS MindForge Considerations 4 & 10 / OCC Third-Party Risk Guidance (2023)",
+          "priority": "Medium"
+        },
+        {
+          "text": "Assign AI risk responsibilities across three lines of defence",
+          "detail": "MindForge integrates into the 3LoD model: 1st line (business units own AI risk), 2nd line (risk/compliance oversight), 3rd line (internal audit). Document RACI for each line's AI-specific responsibilities.",
+          "reg": "MAS MindForge / MAS FEAT Accountability Principle",
           "priority": "Medium"
         }
       ],
       "useCaseFilters": { "stage": [2], "lines": ["Fraud", "Lending", "Customer", "Operations"] },
       "dimDeepDives": {
         "strategy": {
-          "title": "Building AI Strategy & Governance",
+          "title": "Building AI Strategy & Governance (MindForge-Aligned)",
           "actions": [
-            "Benchmark AI activity at peer institutions using public disclosures",
-            "Define your AI ambition level: follower, fast follower, or leader",
-            "Map AI opportunities to your top 5 strategic priorities",
-            "Draft an AI governance charter with clear RACI across business, tech, risk, and compliance",
-            "Set up a quarterly AI steering committee with C-suite representation"
+            "Benchmark AI activity at peer institutions using public disclosures and MAS MindForge consortium case studies",
+            "Define your AI ambition level: follower, fast follower, or leader — and calibrate MindForge compliance intensity proportionately",
+            "Map AI opportunities to your top 5 strategic priorities and run each through a FEAT principles lens",
+            "Draft an AI governance charter aligned to MindForge's 4 sections: Scope & Oversight, Risk Management, Lifecycle, Enablers",
+            "Set up a quarterly AI steering committee with C-suite representation and a standing MindForge compliance agenda item"
           ]
         },
         "data": {
           "title": "Fixing Data Foundations",
           "actions": [
             "Prioritize a single data catalog tool (Alation, Collibra, or open source) and start with one domain",
-            "Map data lineage for your top 3 pilot use cases",
-            "Assign data stewards in each business unit",
-            "Assess cloud readiness: identify regulatory blockers to cloud ML workloads",
-            "Establish a data quality scorecard with monthly reporting"
+            "Map data lineage for top 3 pilot use cases — required for MindForge Consideration 8 (data usage compatibility)",
+            "Assess all training datasets for representativeness and demographic bias per MAS FEAT Fairness Principle",
+            "Assign data stewards in each business unit with accountability for AI data quality",
+            "Establish a data quality scorecard with monthly reporting against MindForge Consideration 9 (data management practices)"
           ]
         },
         "talent": {
@@ -124,18 +142,18 @@
             "Partner with 1–2 universities for AI internship pipelines",
             "Identify 3–5 internal employees with data science interest and offer upskilling via Coursera/DataCamp",
             "Create AI job families with clear leveling and competitive comp bands",
-            "Establish a monthly AI community of practice open to all staff",
-            "Explore AI Center of Excellence (CoE) model vs. embedded team model"
+            "Build MindForge awareness training for 2nd and 3rd line risk and audit staff",
+            "Explore AI Center of Excellence (CoE) model as the governance hub for MindForge compliance"
           ]
         },
         "risk": {
-          "title": "Getting Risk & Compliance Ready",
+          "title": "Getting Risk & Compliance Ready (MindForge Foundation)",
           "actions": [
-            "Conduct a 2-day SR 11-7 workshop with model risk and compliance teams",
-            "Identify your 'Tier 1' high-risk models requiring full independent validation",
-            "Subscribe to OCC, Fed, and CFPB AI guidance newsletters",
-            "Engage outside counsel to assess ECOA exposure for any planned credit AI",
-            "Start documenting model development lifecycle for all new AI projects"
+            "Conduct a 1-day MindForge awareness workshop with model risk, compliance, and internal audit teams",
+            "Apply the MindForge materiality dimensions — Impact, Complexity, Reliance — to score your first pilot use case",
+            "Subscribe to MAS media releases and MindForge consortium updates via mas.gov.sg",
+            "Engage external counsel familiar with MAS FEAT principles and MindForge obligations",
+            "Start documenting model development lifecycle for all new AI projects per MindForge Consideration 12 (pre-deployment testing)"
           ]
         }
       }
@@ -145,143 +163,155 @@
       "fromLabel": "Experimenting",
       "toStage": 3,
       "toLabel": "Scaling",
-      "summary": "You have pilots running and an emerging AI team, but scaling is proving harder than the first use cases. The path to Stage 3 is about MLOps, broader business line adoption, and repeatable governance that can handle many models simultaneously.",
+      "summary": "You have pilots running and an emerging AI team, but scaling is proving harder than the first use cases. The path to Stage 3 is about MLOps, broader business line adoption, and repeatable governance that can handle many models simultaneously. For MAS-regulated institutions, this is the critical stage for operationalizing MindForge's 17 Considerations across the full AI lifecycle.",
       "actions": [
         {
-          "title": "Build or Buy an MLOps Platform",
+          "title": "Build or Buy an MLOps Platform (MindForge Lifecycle-Ready)",
           "effort": "Strategic",
           "impact": "High",
-          "description": "Implement model versioning, experiment tracking, automated retraining pipelines, and model monitoring. Options: Databricks MLflow, SageMaker, Vertex AI, or Weights & Biases.",
+          "description": "Implement model versioning, automated retraining, and model monitoring. MindForge Considerations 12–15 require structured pre-deployment testing, monitoring plans, ongoing monitoring, and change management across the AI lifecycle.",
           "dimension": "data"
         },
         {
-          "title": "Expand to 3+ Business Lines",
+          "title": "Expand to 3+ Business Lines with FEAT Assessments",
           "effort": "Strategic",
           "impact": "High",
-          "description": "Identify AI leads in Lending, Fraud, Compliance, and Trading who own their line's AI roadmap. Each line should have at least one production use case by end of year.",
+          "description": "Identify AI leads in Lending, Fraud, Compliance, and Trading. Each new use case must pass a FEAT principles assessment (Fairness, Ethics, Accountability, Transparency) before deployment — per MindForge Consideration 5.",
           "dimension": "usecases"
         },
         {
-          "title": "Establish a Production Model Monitoring Program",
+          "title": "Implement MindForge Materiality Assessment Process",
           "effort": "Medium",
           "impact": "High",
-          "description": "Implement automated drift detection, performance dashboards, and alert thresholds for all production models. Define clear re-training triggers and escalation procedures.",
+          "description": "Formalize the Impact × Complexity × Reliance materiality scoring for every AI system. High-materiality systems get full 3LoD oversight and board reporting. Low-materiality systems get proportionate, lighter controls.",
           "dimension": "risk"
         },
         {
-          "title": "Scale the AI Team to 15–30 People",
+          "title": "Deploy Automated FEAT Monitoring (Veritas Framework)",
+          "effort": "Medium",
+          "impact": "High",
+          "description": "Implement automated fairness metric tracking using the MAS Veritas initiative methodology. Monitor for demographic disparity, model drift, and FEAT principle violations across all production models continuously.",
+          "dimension": "risk"
+        },
+        {
+          "title": "Scale the AI Team to 15–30 People with 3LoD Coverage",
           "effort": "Strategic",
           "impact": "High",
-          "description": "Grow from a seed team to a full AI Center of Excellence. Add specialized roles: MLOps engineers, AI product managers, AI risk analysts, and business-line AI leads.",
+          "description": "Grow from a seed team to a full AI Center of Excellence. Add 2nd line AI risk analysts and an AI-aware internal audit capability. MindForge requires all three lines of defence to have defined AI risk responsibilities.",
           "dimension": "talent"
         },
         {
-          "title": "Launch an Internal AI Upskilling Program",
+          "title": "Launch a MindForge-Structured AI Upskilling Program",
           "effort": "Medium",
           "impact": "Medium",
-          "description": "Deploy a structured AI curriculum for all staff. Tier 1: AI literacy for all employees. Tier 2: AI tools for power users. Tier 3: AI development for technical staff.",
+          "description": "MindForge Consideration 16 mandates building AI governance skills and culture organization-wide. Three tiers: AI literacy for all staff; FEAT principles and risk controls for power users; AI development + MindForge compliance for technical teams.",
           "dimension": "talent"
         },
         {
-          "title": "Standardize the Model Development Lifecycle (MDLC)",
+          "title": "Standardize the Model Development Lifecycle (MDLC) to MindForge Standards",
           "effort": "Medium",
           "impact": "High",
-          "description": "Document and enforce a standard process for ideation → data → development → validation → deployment → monitoring for all AI projects. Reduces validation bottlenecks.",
+          "description": "Document and enforce a standard process from ideation through retirement aligned to MindForge AI Lifecycle Management section. Include FEAT assessment gates at design, pre-deployment, and quarterly review stages.",
           "dimension": "strategy"
         },
         {
-          "title": "Implement Automated Fair Lending Testing",
+          "title": "Activate AI Verify Toolkit for Pre-Deployment Testing",
           "effort": "Medium",
           "impact": "High",
-          "description": "Integrate disparate impact testing and demographic analysis into your model development pipeline. Test all credit models for ECOA compliance before production.",
+          "description": "Adopt the MAS AI Verify open-source testing toolkit to assess AI models for fairness, transparency, and robustness before deployment. Generates auditable test reports aligned with MindForge Consideration 12.",
           "dimension": "risk"
-        },
-        {
-          "title": "Create a Centralized Feature Store",
-          "effort": "Strategic",
-          "impact": "Medium",
-          "description": "Build a shared feature store serving pre-computed, governed features to all model development teams. Reduces duplicated effort and ensures consistent feature definitions.",
-          "dimension": "data"
         }
       ],
       "governance": [
         {
-          "text": "Implement automated SR 11-7 model validation workflows",
-          "detail": "Systematize validation documentation, challenger models, and performance benchmarking. Target 6-week validation SLA for Tier 2 models.",
-          "reg": "SR 11-7",
+          "text": "Operationalize all 17 MindForge Considerations organization-wide",
+          "detail": "With pilots proven, now scale MindForge compliance to all AI deployments. Map each of the 17 Considerations to policies, procedures, system controls, and role responsibilities. Target full coverage by end of 12-month MAS transition period.",
+          "reg": "MAS Project MindForge — All 17 Considerations",
+          "priority": "High"
+        },
+        {
+          "text": "Implement formal AI risk materiality assessments (Impact × Complexity × Reliance)",
+          "detail": "MindForge requires every AI system to be assessed across three materiality dimensions. Impact = financial/operational/reputational consequences. Complexity = technology novelty + data characteristics. Reliance = degree of autonomy + human oversight available.",
+          "reg": "MAS MindForge — AI Risk Materiality Assessment",
+          "priority": "High"
+        },
+        {
+          "text": "Deploy Veritas framework for FEAT fairness measurement",
+          "detail": "MAS Veritas Initiative provides FEAT assessment methodology, fairness metrics libraries, and templates. Integrate Veritas fairness metrics into your model development pipeline for all customer-facing AI. Free open-source tool.",
+          "reg": "MAS Veritas Initiative / FEAT Principles",
+          "priority": "High"
+        },
+        {
+          "text": "Implement automated SR 11-7 / MindForge model validation workflows",
+          "detail": "Systematize validation documentation, challenger models, and performance benchmarking. Target 6-week validation SLA for Tier 2 models. Include FEAT-specific validation criteria as standard sections.",
+          "reg": "SR 11-7 / MAS MindForge Consideration 12",
           "priority": "High"
         },
         {
           "text": "File EU AI Act high-risk system registrations",
-          "detail": "Credit scoring, fraud detection, and biometrics are likely 'high-risk' under Annex III. Register with EU AI database and complete conformity assessments.",
+          "detail": "Credit scoring, fraud detection, and biometrics are likely 'high-risk' under Annex III. Register with EU AI database and complete conformity assessments. Cross-reference with MindForge materiality classification for dual-jurisdiction efficiency.",
           "reg": "EU AI Act — Article 49 & Annex III",
           "priority": "High"
         },
         {
-          "text": "Deploy model performance monitoring per SR 11-7 ongoing oversight",
-          "detail": "Ongoing monitoring is an explicit SR 11-7 requirement. Automate performance reports quarterly; trigger revalidation when thresholds are breached.",
-          "reg": "SR 11-7 Section VI",
+          "text": "Implement GenAI-specific controls per MindForge guidance",
+          "detail": "If deploying LLMs or generative AI: implement hallucination detection and human review workflows; prompt injection testing; training data leakage safeguards; output filtering. MindForge dedicates a full section to GenAI risks.",
+          "reg": "MAS MindForge — GenAI Risk Section / Project MindForge Phase 1 Whitepaper",
           "priority": "High"
         },
         {
-          "text": "Complete CFPB UDAAP AI audit readiness review",
-          "detail": "CFPB has signaled AI as a UDAAP risk area. Review all customer-facing AI decisions for unfair, deceptive, or abusive outcomes.",
-          "reg": "CFPB UDAAP",
+          "text": "Conduct CFPB UDAAP AI audit readiness review",
+          "detail": "CFPB has signaled AI as a UDAAP risk area. Review all customer-facing AI decisions for unfair, deceptive, or abusive outcomes. Cross-reference with MAS FEAT Ethics and Fairness principles.",
+          "reg": "CFPB UDAAP / MAS FEAT Principles",
           "priority": "High"
         },
         {
-          "text": "Conduct annual fair lending model exam preparation",
-          "detail": "Prepare regression analyses, demographic comparisons, and adverse action documentation for examiner review. Engage outside fair lending counsel.",
-          "reg": "ECOA / Reg B / HMDA",
-          "priority": "Medium"
-        },
-        {
-          "text": "Establish AI third-party vendor review program",
-          "detail": "Annual reviews of all AI vendors including model performance data, SOC 2 reports, and concentration risk assessment.",
-          "reg": "OCC Third-Party Risk Guidance (2023)",
+          "text": "Establish enhanced AI third-party vendor review program",
+          "detail": "MindForge Considerations 4 & 10 require formal third-party AI risk management. Annual reviews including: model performance data, SOC 2 / ISO 27001 reports, contractual AI risk protections, exit strategies, and concentration risk assessment.",
+          "reg": "MAS MindForge Considerations 4 & 10 / OCC Third-Party Risk Guidance (2023)",
           "priority": "Medium"
         }
       ],
       "useCaseFilters": { "stage": [3], "lines": ["Risk", "Compliance", "Trading", "Customer", "Fraud"] },
       "dimDeepDives": {
         "data": {
-          "title": "Building MLOps & Data Infrastructure",
+          "title": "Building MLOps & MindForge Lifecycle Infrastructure",
           "actions": [
-            "Evaluate and select a cloud ML platform (AWS SageMaker, GCP Vertex, Azure ML, or Databricks)",
-            "Implement Git-based model versioning and experiment tracking",
-            "Build automated retraining pipelines triggered by data drift or calendar schedules",
-            "Create a real-time feature serving layer for low-latency inference use cases",
-            "Establish data contracts between data producers and ML consumers"
+            "Select a cloud ML platform and ensure it supports the MindForge AI Lifecycle stages: design, development, testing, deployment, monitoring, retirement",
+            "Implement Git-based model versioning, experiment tracking, and model cards (required for MindForge Consideration 12 pre-deployment documentation)",
+            "Build automated retraining pipelines with FEAT fairness checks as part of the CI/CD pipeline",
+            "Create a real-time feature serving layer for low-latency inference — include data provenance tracking for MindForge data management compliance",
+            "Establish data contracts between data producers and ML consumers, including consent and usage compatibility documentation per MindForge Consideration 8"
           ]
         },
         "usecases": {
-          "title": "Scaling Use Cases Across Lines",
+          "title": "Scaling Use Cases with MindForge Use Case Assessment",
           "actions": [
-            "Run an AI opportunity workshop in each business line to identify top 3 use cases",
-            "Create a portfolio view: track all AI initiatives by stage, ROI, and risk",
-            "Establish an AI project prioritization framework (impact × feasibility × risk)",
-            "Pilot 2 use cases using LLMs / generative AI in lower-risk domains",
-            "Measure and publish AI ROI quarterly to build internal momentum"
+            "Run a FEAT principles workshop in each business line before launching new AI use cases",
+            "Apply MindForge Consideration 7 (use case context/design compatibility) as a mandatory gate in the AI intake process",
+            "Create a portfolio view tracking all AI initiatives by materiality tier, FEAT compliance status, and MindForge Consideration coverage",
+            "Pilot 2 GenAI use cases with full MindForge GenAI controls: hallucination detection, prompt injection testing, human review workflows",
+            "Measure and publish AI ROI and FEAT compliance status quarterly to build internal momentum and board confidence"
           ]
         },
         "strategy": {
-          "title": "Formalizing Governance at Scale",
+          "title": "Formalizing Governance at Scale (MindForge-Aligned)",
           "actions": [
-            "Upgrade AI governance charter to cover generative AI and LLM-specific risks",
-            "Create a Model Risk Committee that meets monthly with CISO, CRO, and CTO",
-            "Define a tiered model risk classification system (Tier 1-3) with proportionate oversight",
-            "Publish an annual AI transparency report for external stakeholders",
-            "Benchmark your governance maturity against NIST AI RMF framework"
+            "Upgrade AI governance charter to cover the full MindForge framework: all 4 sections and 17 Considerations",
+            "Create a Model Risk Committee that meets monthly with CISO, CRO, CTO — with standing MindForge compliance reporting",
+            "Define a tiered model risk classification system using MindForge materiality dimensions (Impact, Complexity, Reliance)",
+            "Publish an annual AI transparency report referencing FEAT principles and MindForge compliance status",
+            "Benchmark governance maturity against NIST AI RMF 1.0 and MAS MindForge simultaneously for dual-standard coverage"
           ]
         },
         "risk": {
-          "title": "Strengthening Risk & Compliance",
+          "title": "Operationalizing MindForge Risk Controls",
           "actions": [
-            "Implement real-time bias and fairness dashboards for credit AI",
-            "Conduct a red-team adversarial testing exercise on your top 3 production models",
-            "Map all production AI to EU AI Act risk tiers and document conformity",
-            "File for any required regulatory approvals before expanding AI credit decisioning",
-            "Establish a model incident response plan for AI failures or adverse outcomes"
+            "Deploy the MAS AI Verify toolkit to run pre-deployment fairness, transparency, and robustness tests",
+            "Implement the Veritas framework for ongoing FEAT fairness measurement across all customer-facing models",
+            "Conduct red-team adversarial testing on top 3 production models, including prompt injection for any GenAI systems",
+            "Map all production AI to both EU AI Act risk tiers and MindForge materiality classifications — document dual compliance",
+            "Establish a model incident response plan referencing MindForge Consideration 13 (monitoring and contingency plans)"
           ]
         }
       }
@@ -291,143 +321,149 @@
       "fromLabel": "Scaling",
       "toStage": 4,
       "toLabel": "Transforming",
-      "summary": "You have strong AI foundations and multiple production deployments. The final leap to Stage 4 means AI is woven into your competitive strategy, driving autonomous decisions, and generating proprietary IP. This is about culture, innovation leadership, and AI-native product design.",
+      "summary": "You have strong AI foundations and multiple production deployments. The final leap to Stage 4 means AI is woven into your competitive strategy, driving autonomous decisions, and generating proprietary IP. For MAS-regulated institutions, this stage includes full MindForge compliance, agentic AI governance, and contributing to industry standards-setting.",
       "actions": [
         {
-          "title": "Launch an AI-First Product Strategy",
+          "title": "Launch an AI-First Product Strategy with FEAT by Design",
           "effort": "Strategic",
           "impact": "High",
-          "description": "Embed AI-native features into your core product roadmap — not as add-ons, but as primary value drivers. Define what a truly AI-native banking product looks like for your customers.",
+          "description": "Embed AI-native features into your core product roadmap. Apply MAS FEAT principles at the product design stage — not as a compliance retrofit. Define what responsible AI-native banking looks like for your customers and regulators.",
           "dimension": "strategy"
         },
         {
-          "title": "Deploy Autonomous AI Decision Systems",
+          "title": "Deploy Autonomous AI with MindForge Agentic AI Guardrails",
           "effort": "Strategic",
           "impact": "High",
-          "description": "Move selected use cases to full straight-through AI processing without human review (e.g., small business credit, fraud blocking). Implement robust human-in-the-loop escalation for edge cases.",
+          "description": "Move selected use cases to full straight-through AI processing. MindForge requires agentic AI systems to have: defined boundary constraints, safe action limits aligned to business objectives, human escalation protocols, and real-time intervention capabilities.",
           "dimension": "usecases"
         },
         {
-          "title": "Build Proprietary Foundation Models or Fine-Tune LLMs",
+          "title": "Build Proprietary Foundation Models with FEAT Compliance by Design",
           "effort": "Strategic",
           "impact": "High",
-          "description": "Invest in fine-tuning large language models on your proprietary data (loan books, customer interactions, transaction patterns) to create differentiated AI capabilities.",
+          "description": "Fine-tune LLMs on institutional data. Apply MindForge data management controls (Consideration 9) and full GenAI-specific risk controls: hallucination benchmarking, adversarial prompt testing, training data leakage assessment, and output guardrails.",
           "dimension": "data"
         },
         {
-          "title": "Establish an AI Research Function or Lab",
+          "title": "Establish an AI Research Function Contributing to MindForge Standards",
           "effort": "Strategic",
           "impact": "Medium",
-          "description": "Create a dedicated AI research team publishing papers, filing patents, and contributing to industry standards bodies. Signals innovation leadership and attracts top talent.",
+          "description": "Create a dedicated AI research team. Participate in the MAS BuildFin.ai AI risk management workgroup developing next-generation MindForge guidance for emerging AI technologies, including agentic AI.",
           "dimension": "talent"
         },
         {
-          "title": "Implement AI-to-AI Orchestration",
+          "title": "Implement Multi-Agent AI with Cross-System MindForge Governance",
           "effort": "Strategic",
           "impact": "High",
-          "description": "Deploy multi-agent AI systems where specialized models (credit, fraud, compliance, market risk) work in concert, sharing signals and automating cross-functional workflows.",
+          "description": "Deploy multi-agent AI systems where specialized models work in concert. MindForge requires each agent within a multi-agent system to have its own materiality assessment, documented constraints, and defined human oversight touchpoints.",
           "dimension": "usecases"
         },
         {
-          "title": "Achieve Board-Level AI Accountability",
+          "title": "Achieve Board-Level AI Accountability with MindForge Reporting",
           "effort": "Medium",
           "impact": "High",
-          "description": "Establish board committee oversight of AI strategy and risk. Publish annual AI transparency report. Appoint a Chief AI Officer with explicit P&L accountability.",
+          "description": "MindForge Consideration 1 requires board-level AI strategy approval and risk appetite setting. Establish a formal board AI committee with quarterly MindForge compliance reporting, material model incident reviews, and FEAT principle adherence dashboards.",
           "dimension": "strategy"
         },
         {
-          "title": "Monetize AI Capabilities Externally",
+          "title": "Monetize AI Capabilities with MindForge-Compliant API Products",
           "effort": "Strategic",
           "impact": "Medium",
-          "description": "Explore BaaS/API revenue from AI capabilities: fraud scoring, credit decisioning, AML analytics. Partner with fintechs to distribute AI-powered financial products.",
+          "description": "Package AI capabilities as BaaS/API revenue streams. When distributing AI to third parties, MindForge Considerations 4 & 10 apply in reverse — your institution becomes an AI vendor subject to counterparties' third-party AI risk management.",
           "dimension": "usecases"
         },
         {
-          "title": "Join and Lead Industry AI Consortia",
+          "title": "Lead MAS MindForge Consortium and Industry Standards",
           "effort": "Quick Win",
           "impact": "Medium",
-          "description": "Take leadership roles in FINOS, Partnership on AI, BIS Innovation Hub, or similar. Sets standards, builds brand, and provides early access to regulatory guidance.",
+          "description": "Take leadership roles in MAS BuildFin.ai, FINOS, Partnership on AI, and the MindForge consortium. Shape agentic AI and next-generation AI governance standards rather than reacting to them.",
           "dimension": "risk"
         }
       ],
       "governance": [
         {
-          "text": "Implement autonomous AI decision audit trails",
-          "detail": "Every fully automated AI decision must be logged with explainable factors, alternative actions considered, and outcome tracking. Required for examiner review.",
-          "reg": "CFPB / ECOA / EU AI Act Art. 14",
+          "text": "Achieve full MindForge compliance — all 17 Considerations operationalized",
+          "detail": "Every Consideration should have documented controls, assigned owners, defined KPIs, and regular review cycles. Present MindForge compliance status to board quarterly. Target completion within 12-month MAS regulatory transition window.",
+          "reg": "MAS Project MindForge — All 17 Considerations",
+          "priority": "High"
+        },
+        {
+          "text": "Implement MindForge agentic AI governance framework",
+          "detail": "MindForge addresses agentic AI as an emerging frontier. Implement: action boundary constraints; kill-switch and circuit-breaker mechanisms; human escalation triggers; audit trail for every autonomous action taken; regular boundary testing.",
+          "reg": "MAS MindForge — Agentic AI Section / MAS BuildFin.ai Workgroup",
+          "priority": "High"
+        },
+        {
+          "text": "Implement autonomous AI decision audit trails (FEAT Accountability)",
+          "detail": "Every fully automated AI decision must be logged with explainable factors, alternative actions considered, outcome tracking, and the FEAT assessment it passed. Required for MAS examiner review and EU AI Act Article 14.",
+          "reg": "MAS FEAT Accountability & Transparency Principles / EU AI Act Art. 14",
           "priority": "High"
         },
         {
           "text": "Complete EU AI Act conformity assessments for all high-risk systems",
-          "detail": "Full technical documentation, conformity assessment, and EU AI database registration for all Annex III systems by compliance deadline.",
+          "detail": "Full technical documentation, conformity assessment, and EU AI database registration for all Annex III systems by compliance deadline. Cross-reference with MindForge materiality classifications for dual-jurisdiction efficiency.",
           "reg": "EU AI Act — Article 43 & 49",
           "priority": "High"
         },
         {
-          "text": "Establish AI systemic risk reporting to regulators",
-          "detail": "Large institutions: engage Fed/OCC on AI systemic risk implications. Consider proactive engagement rather than waiting for examination.",
-          "reg": "FSOC / Basel Committee on AI",
+          "text": "Engage MAS proactively on AI systemic risk and novel use cases",
+          "detail": "Large institutions: brief MAS/FSB on AI systemic risk implications. Participate in MAS regulatory sandbox for novel AI financial applications. Consider proactive engagement rather than waiting for examination.",
+          "reg": "FSOC / Basel Committee on AI / MAS Regulatory Sandbox",
           "priority": "High"
         },
         {
+          "text": "Publish voluntary AI transparency report (MindForge + NIST AI RMF)",
+          "detail": "Publish externally facing report on AI use, FEAT compliance, MindForge governance maturity, and societal impact. Reference both MAS MindForge and NIST AI RMF 1.0 for global audience credibility.",
+          "reg": "MAS FEAT Transparency Principle / NIST AI RMF 1.0 / PAI Standards",
+          "priority": "Medium"
+        },
+        {
           "text": "File AI-related patent applications",
-          "detail": "Protect proprietary model architectures, feature engineering methods, and novel AI applications through patent filings.",
-          "reg": "USPTO / EPO",
-          "priority": "Medium"
-        },
-        {
-          "text": "Conduct annual AI systemic risk self-assessment",
-          "detail": "Assess concentration risk from AI vendor dependencies, model monoculture risk, and correlated AI failures across the industry.",
-          "reg": "FSOC AI Risk Guidance",
-          "priority": "Medium"
-        },
-        {
-          "text": "Publish voluntary AI transparency report",
-          "detail": "Following NIST AI RMF and Partnership on AI standards, publish externally facing report on AI use, governance, and impact.",
-          "reg": "NIST AI RMF 1.0 / PAI Standards",
+          "detail": "Protect proprietary model architectures, FEAT-compliant fairness mechanisms, novel AI applications, and MindForge-aligned governance tooling through patent filings.",
+          "reg": "USPTO / IPOS (Singapore)",
           "priority": "Medium"
         }
       ],
       "useCaseFilters": { "stage": [4], "lines": ["Trading", "Lending", "Customer", "Operations", "Compliance"] },
       "dimDeepDives": {
         "usecases": {
-          "title": "Deploying Autonomous AI",
+          "title": "Deploying Autonomous AI with MindForge Agentic Controls",
           "actions": [
-            "Map the human review steps in your top 5 AI workflows and identify which can be safely automated",
-            "Build robust exception handling and human escalation for edge cases before removing human review",
-            "Define 'confidence thresholds' below which AI defers to human judgment",
-            "Run shadow mode testing (AI decision vs. human decision) for 90 days before going autonomous",
-            "Establish a real-time override dashboard for human operators monitoring autonomous systems"
+            "For each autonomous AI system, complete the MindForge agentic AI assessment: document action boundaries, risk of unintended behavior, and human oversight mechanisms",
+            "Build robust exception handling and human escalation — MindForge requires human oversight for high-impact autonomous decisions",
+            "Define 'confidence thresholds' below which AI defers to human judgment — calibrated against MindForge materiality tier",
+            "Run shadow mode testing (AI decision vs. human decision) for 90 days with FEAT fairness analysis before removing human review",
+            "Establish a real-time intervention dashboard for human operators monitoring autonomous systems — per MindForge Consideration 14"
           ]
         },
         "data": {
-          "title": "Building Proprietary AI Assets",
+          "title": "Building Proprietary AI Assets with MindForge Compliance",
           "actions": [
-            "Inventory your unique data assets that could be used to fine-tune LLMs",
-            "Evaluate LoRA/QLoRA fine-tuning vs. RAG vs. full pre-training for your use cases",
-            "Build a private model hub for internally developed and fine-tuned models",
-            "Establish a synthetic data factory for privacy-preserving training data generation",
-            "File IP protection for novel model architectures and training methodologies"
+            "Inventory your unique data assets — apply MindForge Consideration 8 (data usage compatibility) and 9 (data management) before using in model training",
+            "For LLM fine-tuning: conduct training data leakage assessment and implement output sanitization per MindForge GenAI controls",
+            "Build a private model hub for internally developed models with built-in FEAT compliance metadata and audit trails",
+            "Establish a synthetic data factory — validate synthetic data fidelity and demographic representativeness per FEAT Fairness Principle",
+            "File IP protection for novel FEAT-compliant model architectures and governance-enabling AI innovations"
           ]
         },
         "talent": {
-          "title": "AI-First Culture & Leadership",
+          "title": "AI-First Culture with MindForge Governance Expertise",
           "actions": [
-            "Add 'AI literacy' as a competency in all employee performance reviews",
-            "Create an AI Fellows program: rotating senior engineers into AI research for 6-12 months",
-            "Partner with 3+ top-tier universities for AI research collaboration",
-            "Sponsor AI hackathons open to all employees — not just technologists",
-            "Publish employee-authored AI research papers and blog posts externally"
+            "Add 'AI governance and FEAT principles literacy' as a competency in all employee performance reviews",
+            "Create an AI Fellows program: rotating engineers into AI research — with a MindForge compliance focus track",
+            "Partner with NUS, NTU, and top-tier universities on MAS FEAT and responsible AI research collaboration",
+            "Sponsor AI hackathons including a 'responsible AI' track judged against FEAT principles",
+            "Contribute to MindForge consortium case study library — share implementation experiences to strengthen industry standards"
           ]
         },
         "strategy": {
-          "title": "AI-Native Strategy & IP",
+          "title": "AI-Native Strategy with Full MindForge Leadership",
           "actions": [
-            "Rewrite your 3-year strategic plan with AI as the primary growth driver",
-            "Identify 2–3 new revenue streams enabled only by your AI capabilities",
-            "Explore licensing your AI platform to peer banks or fintechs",
-            "Participate in regulatory sandboxes for novel AI financial applications",
-            "Develop AI-first partnership strategy with cloud hyperscalers and AI labs"
+            "Rewrite your 3-year strategic plan with AI as primary growth driver and MindForge compliance as a competitive differentiator",
+            "Identify revenue streams enabled by your MindForge-certified AI platform (licensing to smaller regulated institutions)",
+            "Explore MAS regulatory sandbox participation for novel agentic AI financial applications",
+            "Develop an AI-first partnership strategy with MAS, cloud hyperscalers, and AI labs aligned to MindForge principles",
+            "Present your MindForge compliance journey externally — at MAS FinTech Festival, Singapore FinTech Summit — to build brand"
           ]
         }
       }
@@ -437,131 +473,143 @@
       "fromLabel": "Transforming",
       "toStage": 4,
       "toLabel": "Transforming (Sustain & Lead)",
-      "summary": "You're an AI-first financial institution. The imperative now is sustained leadership: staying ahead of the frontier, managing systemic AI risk, and shaping industry standards. Your playbook focuses on innovation velocity and responsible scale.",
+      "summary": "You're an AI-first financial institution with full MindForge compliance. The imperative now is sustained leadership: staying ahead of the AI frontier, managing systemic AI risk, shaping MindForge's next evolution (agentic AI standards), and maintaining regulatory trust. Your playbook focuses on innovation velocity, responsible scale, and global governance influence.",
       "actions": [
         {
-          "title": "Continuous Frontier Model Evaluation",
+          "title": "Drive MindForge's Agentic AI Standards Development",
+          "effort": "Medium",
+          "impact": "High",
+          "description": "Actively participate in the MAS BuildFin.ai AI risk management workgroup developing frameworks for agentic AI. Your operational experience with autonomous AI systems makes you a critical voice in shaping standards that will apply to the whole industry.",
+          "dimension": "risk"
+        },
+        {
+          "title": "Continuous Frontier Model Evaluation with MindForge Controls",
           "effort": "Quick Win",
           "impact": "High",
-          "description": "Run quarterly bake-offs between your proprietary models and the latest foundation models. Adopt or integrate frontier capabilities faster than competitors.",
+          "description": "Run quarterly bake-offs between your proprietary models and the latest foundation models. Apply full MindForge AI lifecycle assessment (Considerations 7–15) before any new model class reaches production.",
           "dimension": "usecases"
         },
         {
-          "title": "AI Regulatory Leadership Engagement",
-          "effort": "Medium",
-          "impact": "High",
-          "description": "Proactively engage Fed, OCC, CFPB, and EU regulators with your AI governance practices. Shape guidance rather than react to it. Comment on all relevant AI rulemaking.",
-          "dimension": "risk"
-        },
-        {
-          "title": "Publish Annual AI Transparency Report",
+          "title": "Publish Annual MindForge Compliance and AI Transparency Report",
           "effort": "Quick Win",
-          "impact": "Medium",
-          "description": "Release a comprehensive public report on AI use, model performance, fairness metrics, and governance practices. Sets industry standard and builds stakeholder trust.",
+          "impact": "High",
+          "description": "Release a comprehensive public report covering FEAT principle adherence metrics, MindForge Consideration status, AI incident outcomes, fairness benchmark results, and governance evolution. Sets the industry standard for responsible AI disclosure.",
           "dimension": "strategy"
         },
         {
-          "title": "Invest in AI Safety & Alignment Research",
+          "title": "Invest in AI Safety, Alignment, and Responsible AI Research",
           "effort": "Strategic",
           "impact": "Medium",
-          "description": "Fund or participate in research on AI alignment, interpretability, and safety — especially for autonomous financial AI. Positions you as a responsible AI leader.",
+          "description": "Fund or participate in research on AI alignment, interpretability, and safety — especially for agentic financial AI. Partner with MAS and academic institutions. Positions you as a responsible AI leader and shapes MindForge's next iteration.",
           "dimension": "risk"
         },
         {
-          "title": "Build AI Talent Pipeline Programs",
+          "title": "Build Sustainable AI Talent Pipeline with MindForge Expertise",
           "effort": "Medium",
           "impact": "Medium",
-          "description": "Establish university partnerships, PhD fellowship programs, and AI apprenticeships. Ensure a 3–5 year talent pipeline to sustain leadership.",
+          "description": "Establish university partnerships, PhD fellowship programs, and AI apprenticeships with a responsible AI and MindForge governance track. Ensure a 3–5 year talent pipeline to sustain governance leadership.",
           "dimension": "talent"
+        },
+        {
+          "title": "Monetize MindForge-Certified AI Platform as a Service",
+          "effort": "Strategic",
+          "impact": "High",
+          "description": "Package your MindForge-compliant AI infrastructure, validated models, and governance frameworks as financial AI APIs for community banks and fintechs who cannot build it themselves. Your compliance certification becomes a commercial moat.",
+          "dimension": "usecases"
         },
         {
           "title": "Explore Quantum-AI Hybrid Strategies",
           "effort": "Strategic",
           "impact": "Medium",
-          "description": "Begin quantum computing exploratory programs for portfolio optimization, cryptography migration, and future ML acceleration. 3–5 year horizon investment.",
+          "description": "Begin quantum computing exploratory programs for portfolio optimization, cryptography migration, and future ML acceleration. Engage MAS on quantum-AI implications for MindForge's next revision cycle.",
           "dimension": "data"
         },
         {
-          "title": "Monetize AI Platform as a Service",
-          "effort": "Strategic",
-          "impact": "High",
-          "description": "Package your AI infrastructure, models, and governance frameworks as financial AI APIs for community banks, credit unions, and fintechs. Creates a new revenue stream.",
-          "dimension": "usecases"
-        },
-        {
-          "title": "AI Ethics & Impact Annual Review",
+          "title": "Annual AI Ethics and Societal Impact Review (FEAT Ethics Principle)",
           "effort": "Quick Win",
           "impact": "Medium",
-          "description": "Conduct a formal review of AI societal impact: job displacement, financial inclusion, algorithmic bias, and environmental footprint of AI compute.",
+          "description": "Conduct a formal annual review of AI societal impact aligned to MAS FEAT Ethics Principle: job displacement, financial inclusion, algorithmic bias, environmental compute footprint, and consumer welfare outcomes.",
           "dimension": "strategy"
         }
       ],
       "governance": [
         {
-          "text": "Annual AI systemic risk assessment and regulator briefing",
-          "detail": "Proactively brief primary regulators on AI exposure, concentration risk, and novel use cases. Demonstrates leadership and builds examiner trust.",
-          "reg": "FSOC / OCC / Federal Reserve",
+          "text": "Annual MindForge full-cycle compliance review with MAS engagement",
+          "detail": "Commission an independent review of all 17 MindForge Considerations annually. Proactively brief MAS supervisors on AI risk exposure, novel use cases, and agentic AI developments. Demonstrates leadership and builds examiner trust.",
+          "reg": "MAS Project MindForge — All 17 Considerations / MAS Supervisory Engagement",
+          "priority": "High"
+        },
+        {
+          "text": "Contribute to MindForge's agentic AI governance framework development",
+          "detail": "Participate in the MAS BuildFin.ai workgroup developing agentic AI standards. Share operational learnings from your autonomous AI deployments — boundary failures, escalation triggers, novel risk patterns — to inform industry guidance.",
+          "reg": "MAS BuildFin.ai / MAS MindForge Agentic AI Working Group",
           "priority": "High"
         },
         {
           "text": "Maintain EU AI Act compliance for all registered high-risk systems",
-          "detail": "Annual re-assessment, updated technical documentation, and post-market monitoring reports for all Annex III AI systems.",
-          "reg": "EU AI Act — Article 72",
+          "detail": "Annual re-assessment, updated technical documentation, and post-market monitoring reports for all Annex III AI systems. Cross-reference with MindForge materiality re-assessments for dual-jurisdiction efficiency.",
+          "reg": "EU AI Act — Article 72 / MAS MindForge",
           "priority": "High"
         },
         {
-          "text": "NIST AI RMF annual maturity assessment",
-          "detail": "Formal gap assessment against NIST AI RMF 1.0 (Govern, Map, Measure, Manage). Publish results in transparency report.",
-          "reg": "NIST AI RMF 1.0",
+          "text": "NIST AI RMF and MindForge joint maturity assessment",
+          "detail": "Conduct an annual gap assessment against both NIST AI RMF 1.0 (Govern, Map, Measure, Manage) and MAS MindForge simultaneously. Document alignment and residual gaps. Publish results in transparency report.",
+          "reg": "NIST AI RMF 1.0 / MAS MindForge",
           "priority": "Medium"
         },
         {
-          "text": "Patent portfolio annual review and filing",
-          "detail": "Review AI patent portfolio, identify new inventions from the prior year, and file continuation patents for maturing innovations.",
-          "reg": "USPTO",
+          "text": "Agentic AI systemic risk scenario analysis",
+          "detail": "Model systemic risk scenarios specific to agentic AI: correlated autonomous decisions across multiple institutions, AI-driven market disruption, multi-agent cascading failures. Share findings with FSB and BIS.",
+          "reg": "FSOC / FSB / BIS / MAS MindForge Agentic AI Section",
+          "priority": "Medium"
+        },
+        {
+          "text": "Patent portfolio annual review and filing (IPOS + USPTO)",
+          "detail": "Review AI patent portfolio including MindForge-enabling governance innovations. File continuation patents for maturing innovations. Engage IPOS for Singapore filings and USPTO for global coverage.",
+          "reg": "IPOS (Singapore) / USPTO",
           "priority": "Medium"
         }
       ],
       "useCaseFilters": { "stage": [4], "lines": ["Trading", "Lending", "Customer", "Operations", "Compliance", "Risk"] },
       "dimDeepDives": {
         "strategy": {
-          "title": "Sustaining AI Leadership",
+          "title": "Sustaining AI Leadership with MindForge at the Core",
           "actions": [
-            "Establish a 5-year AI technology horizon scanning function",
-            "Create an AI Leadership Council with external advisors from academia, policy, and industry",
-            "Define 'moonshot' AI projects with 3+ year timelines and dedicated R&D budget",
-            "Measure AI competitive advantage through external benchmarking annually",
-            "Share AI governance best practices publicly — leadership builds ecosystem"
+            "Establish a 5-year AI technology horizon scanning function tracking MindForge evolution, MAS policy signals, and emerging AI paradigms",
+            "Create an AI Leadership Council including MAS advisors, FEAT experts, and external responsible AI specialists",
+            "Define 'moonshot' AI projects and pre-clear novel approaches with MAS via regulatory sandbox engagement",
+            "Measure AI competitive advantage through external benchmarking including MindForge compliance maturity scoring",
+            "Publish MindForge implementation learnings publicly — leadership builds the ecosystem and earns regulatory goodwill"
           ]
         },
         "risk": {
-          "title": "Managing Frontier AI Risk",
+          "title": "Managing Frontier AI Risk with MindForge Leadership",
           "actions": [
-            "Model systemic risk scenarios: what happens if your AI fails simultaneously across multiple business lines?",
-            "Conduct adversarial red-team exercises on your most critical autonomous AI systems",
-            "Implement AI circuit breakers — automatic shutdown triggers if anomalous behavior is detected",
-            "Engage with BIS, FSB, and IOSCO on international AI financial risk standards",
-            "Participate in industry-wide AI incident response frameworks (e.g., CERT for financial AI)"
+            "Model systemic risk scenarios for agentic AI failures — share findings with MAS, FSB, and BIS for policy input",
+            "Conduct adversarial red-team exercises on autonomous AI systems including novel agentic AI attack vectors",
+            "Implement AI circuit breakers aligned to MindForge Consideration 13 — automatic shutdown triggers for anomalous autonomous behavior",
+            "Engage with MAS, FSB, and IOSCO on international agentic AI financial risk standards development",
+            "Participate in cross-industry AI incident response frameworks — establish CERT-equivalent for financial AI failures"
           ]
         },
         "data": {
-          "title": "Next-Generation AI Infrastructure",
+          "title": "Next-Generation AI Infrastructure with MindForge Compliance",
           "actions": [
-            "Evaluate quantum-classical hybrid approaches for portfolio optimization and cryptography",
-            "Implement federated learning for privacy-preserving AI across subsidiaries or consortia",
-            "Build a real-time AI observability platform spanning all models, features, and outcomes",
-            "Explore neuromorphic computing or specialized AI chips for inference efficiency",
-            "Create a carbon-aware AI compute strategy to manage the environmental footprint"
+            "Evaluate quantum-classical hybrid approaches — pre-engage MAS on quantum-AI implications for MindForge's next revision",
+            "Implement federated learning for privacy-preserving AI — document FEAT Fairness and Ethics compliance for federated models",
+            "Build a real-time AI observability platform spanning all models, FEAT metrics, MindForge Consideration status, and agentic AI action logs",
+            "Create a carbon-aware AI compute strategy — report environmental impact as part of FEAT Ethics annual review",
+            "Establish a synthetic data factory with documented representativeness and demographic balance per FEAT Fairness Principle"
           ]
         },
         "talent": {
-          "title": "Sustaining AI Talent Excellence",
+          "title": "Sustaining MindForge Governance Expertise",
           "actions": [
-            "Benchmark AI compensation against Big Tech and hedge funds annually",
-            "Create internal AI career paths from analyst to principal researcher",
-            "Establish sabbatical program for senior AI staff at partner universities or research labs",
-            "Sponsor diversity-focused AI scholarship programs at target universities",
-            "Build an alumni network of former AI staff who remain brand advocates and referrers"
+            "Benchmark AI governance compensation (including MindForge specialists) against Big Tech and regulatory bodies annually",
+            "Create internal AI governance career paths from analyst to Principal AI Risk Officer",
+            "Establish sabbatical program for senior AI risk staff at MAS or partner regulatory bodies",
+            "Sponsor diversity-focused AI governance scholarship programs at NUS, NTU, and target universities",
+            "Build an alumni network of former AI governance staff — keep them engaged as advisors on MindForge evolution"
           ]
         }
       }

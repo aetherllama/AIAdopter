@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAS MindForge Framework — AI Adopter</title>
+  <meta name="description" content="How MAS Project MindForge and FEAT principles map to your AI maturity stage — a guide for MAS-regulated financial institutions.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .mindforge-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #0f2744, #1a3a5c);
+      border: 1px solid #2d5a8e;
+      color: #60a5fa;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .pillar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-top: 3px solid var(--accent);
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .pillar-card:hover { transform: translateY(-2px); border-top-color: var(--accent2); }
+    .pillar-num {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .pillar-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .pillar-desc { font-size: 13px; color: var(--muted2); margin-bottom: 14px; line-height: 1.5; }
+    .consideration-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .consideration-list li {
+      font-size: 12px;
+      color: var(--muted);
+      padding-left: 14px;
+      position: relative;
+    }
+    .consideration-list li::before {
+      content: attr(data-num);
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .feat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 3px solid;
+    }
+    .feat-f { border-color: #3b82f6; }
+    .feat-e { border-color: #10b981; }
+    .feat-a { border-color: #f59e0b; }
+    .feat-t { border-color: #8b5cf6; }
+    .feat-letter {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .feat-f .feat-letter { color: #3b82f6; }
+    .feat-e .feat-letter { color: #10b981; }
+    .feat-a .feat-letter { color: #f59e0b; }
+    .feat-t .feat-letter { color: #8b5cf6; }
+    .stage-map-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .stage-map-row:last-child { border-bottom: none; }
+    .tool-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .tool-card h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .tool-card p { font-size: 13px; color: var(--muted2); line-height: 1.5; }
+    .timeline-item {
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-dot {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--tag-bg);
+      border: 2px solid var(--accent);
+      color: var(--accent2);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+  <div class="header-brand">
+    <span class="icon">◈</span>
+    <span>AI Adopter</span>
+  </div>
+  <nav id="main-nav"></nav>
+  <div class="header-actions">
+    <span class="mindforge-badge">MAS MindForge</span>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav"></nav>
+
+<main>
+
+  <!-- Hero -->
+  <div style="text-align:center;padding:48px 0 36px">
+    <div class="mindforge-badge" style="margin-bottom:16px;font-size:13px;padding:6px 16px">MAS Project MindForge — 2026</div>
+    <h1 style="font-size:32px;font-weight:700;color:var(--text);margin-bottom:12px">MAS MindForge AI Risk Management Framework</h1>
+    <p style="font-size:15px;color:var(--muted2);max-width:640px;margin:0 auto">
+      The Monetary Authority of Singapore's AI Risk Management Toolkit for financial institutions — covering traditional AI, generative AI, and emerging agentic AI technologies. Applicable to all MAS-regulated entities.
+    </p>
+  </div>
+
+  <!-- What is MindForge -->
+  <div class="card" style="margin-bottom:32px;border-color:#2d5a8e;background:linear-gradient(135deg,#0a1628,#111827)">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
+      <div>
+        <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent2);margin-bottom:10px">What is MindForge?</div>
+        <p style="font-size:14px;color:var(--muted2);line-height:1.6;margin-bottom:12px">
+          Project MindForge is the MAS's industry-led initiative to develop a comprehensive AI Risk Management Toolkit for the Singapore financial sector. Launched in 2023, it concluded Phase 2 in March 2026 with the publication of the full toolkit developed by a consortium of 24 leading financial institutions.
+        </p>
+        <p style="font-size:14px;color:var(--muted2);line-height:1.6">
+          The toolkit spans traditional AI, generative AI, and agentic AI — and is accompanied by the MAS AI Risk Management Guidelines issued via consultation in November 2025, with a 12-month transition period for compliance.
+        </p>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent2);margin-bottom:10px">Scope of Application</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
+          <li style="font-size:13px;color:var(--muted2);display:flex;gap:8px"><span style="color:var(--green)">✓</span>All MAS-regulated financial institutions</li>
+          <li style="font-size:13px;color:var(--muted2);display:flex;gap:8px"><span style="color:var(--green)">✓</span>Banks, insurers, capital market firms, payment institutions</li>
+          <li style="font-size:13px;color:var(--muted2);display:flex;gap:8px"><span style="color:var(--green)">✓</span>Traditional AI, GenAI, and agentic AI deployments</li>
+          <li style="font-size:13px;color:var(--muted2);display:flex;gap:8px"><span style="color:var(--green)">✓</span>Internal AI and third-party AI products</li>
+          <li style="font-size:13px;color:var(--muted2);display:flex;gap:8px"><span style="color:var(--amber)">~</span>Proportionality applies — controls scaled to risk materiality</li>
+          <li style="font-size:13px;color:var(--muted2);display:flex;gap:8px"><span style="color:var(--accent2)">→</span>12-month transition period after 2026 promulgation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEAT Principles -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">The FEAT Principles</div>
+      <div class="section-sub">Foundation of MAS responsible AI — Fairness, Ethics, Accountability, Transparency</div>
+    </div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:40px">
+    <div class="feat-card feat-f">
+      <div class="feat-letter">F</div>
+      <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">Fairness</div>
+      <p style="font-size:13px;color:var(--muted2);line-height:1.5">AI systems must not produce unfairly biased outcomes. Define fairness metrics, monitor for demographic disparities, and document bias assessments for all customer-facing AI.</p>
+      <div style="margin-top:12px;font-size:11px;color:var(--accent);font-weight:600">→ Veritas Framework for measurement</div>
+    </div>
+    <div class="feat-card feat-e">
+      <div class="feat-letter">E</div>
+      <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">Ethics</div>
+      <p style="font-size:13px;color:var(--muted2);line-height:1.5">AI systems must serve legitimate purposes without creating disproportionate harm to customers or communities. Annual ethics review of societal impact required.</p>
+      <div style="margin-top:12px;font-size:11px;color:var(--green);font-weight:600">→ Annual AI impact assessment</div>
+    </div>
+    <div class="feat-card feat-a">
+      <div class="feat-letter">A</div>
+      <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">Accountability</div>
+      <p style="font-size:13px;color:var(--muted2);line-height:1.5">Clear accountability from the boardroom to the model development team. Designated governance functions, escalation procedures, and three lines of defence with AI-specific responsibilities.</p>
+      <div style="margin-top:12px;font-size:11px;color:var(--amber);font-weight:600">→ 3LoD model for AI risk</div>
+    </div>
+    <div class="feat-card feat-t">
+      <div class="feat-letter">T</div>
+      <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">Transparency</div>
+      <p style="font-size:13px;color:var(--muted2);line-height:1.5">AI decisions must be explainable to customers, regulators, and internal audit. Model documentation, audit trails, and explainability outputs required for high-materiality systems.</p>
+      <div style="margin-top:12px;font-size:11px;color:var(--purple);font-weight:600">→ AI Verify toolkit for testing</div>
+    </div>
+  </div>
+
+  <!-- Four Sections / Pillars -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">Four Framework Sections</div>
+      <div class="section-sub">17 Considerations across Scope, Risk Management, Lifecycle, and Enablers</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:40px">
+
+    <div class="pillar-card">
+      <div class="pillar-num">Section 1</div>
+      <div class="pillar-title">Scope & AI Oversight</div>
+      <div class="pillar-desc">Establish AI governance structures and clarify oversight roles and responsibilities across the institution — from the board to individual model owners.</div>
+      <ul class="consideration-list">
+        <li data-num="1">Establishing clear AI governance operating models with board accountability</li>
+        <li data-num="2">Defining AI-related policies, procedures, and standards</li>
+        <li data-num="3">Integrating AI risks into the enterprise risk framework</li>
+        <li data-num="4">Enhancing third-party AI risk management practices</li>
+      </ul>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-num">Section 2</div>
+      <div class="pillar-title">AI Risk Management</div>
+      <div class="pillar-desc">Identify AI usage across the organization, assess risk materiality using the Impact × Complexity × Reliance model, and maintain a comprehensive AI inventory.</div>
+      <ul class="consideration-list">
+        <li data-num="5">Implementing use case-level risk management with proportionate controls</li>
+        <li data-num="6">Maintaining AI inventory capabilities (all AI — internal, third-party, open-source)</li>
+        <li data-num="7">Assessing use case context and design compatibility</li>
+        <li data-num="8">Evaluating data usage compatibility</li>
+        <li data-num="9">Adopting appropriate data management practices</li>
+        <li data-num="10">Evaluating third-party AI product risks</li>
+      </ul>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-num">Section 3</div>
+      <div class="pillar-title">AI Lifecycle Management</div>
+      <div class="pillar-desc">Implement controls covering the entire AI lifecycle — from design and development through deployment, ongoing monitoring, change management, and retirement.</div>
+      <ul class="consideration-list">
+        <li data-num="11">Building appropriate guardrails and performance metrics</li>
+        <li data-num="12">Conducting pre-deployment testing and review</li>
+        <li data-num="13">Developing monitoring and contingency plans</li>
+        <li data-num="14">Conducting ongoing monitoring in production</li>
+        <li data-num="15">Managing changes through effective change management</li>
+      </ul>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-num">Section 4</div>
+      <div class="pillar-title">Enablers</div>
+      <div class="pillar-desc">Develop the organizational capabilities, infrastructure, and resources needed for sustainable, responsible AI use and ongoing risk management at scale.</div>
+      <ul class="consideration-list">
+        <li data-num="16">Building employee AI governance skills and culture across all three lines of defence</li>
+        <li data-num="17">Supporting AI deployment fitness (infrastructure, tooling, resourcing)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Risk Materiality Assessment -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">Risk Materiality Assessment</div>
+      <div class="section-sub">Three dimensions determine the level of governance control required for each AI system</div>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-bottom:40px">
+    <div class="card" style="border-color:var(--accent)">
+      <div style="font-size:28px;font-weight:800;color:var(--accent);margin-bottom:8px">I</div>
+      <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">Impact</div>
+      <p style="font-size:13px;color:var(--muted2);line-height:1.5">Potential consequences to the institution, customers, and stakeholders — covering financial, operational, regulatory, and reputational effects if the AI system fails or produces biased outcomes.</p>
+    </div>
+    <div class="card" style="border-color:var(--purple)">
+      <div style="font-size:28px;font-weight:800;color:var(--purple);margin-bottom:8px">C</div>
+      <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">Complexity</div>
+      <p style="font-size:13px;color:var(--muted2);line-height:1.5">Derived from the technology's novelty, data characteristics (volume, variety, sensitivity), evolving AI capabilities, and the degree to which the system's behavior can be predicted and explained.</p>
+    </div>
+    <div class="card" style="border-color:var(--amber)">
+      <div style="font-size:28px;font-weight:800;color:var(--amber);margin-bottom:8px">R</div>
+      <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">Reliance</div>
+      <p style="font-size:13px;color:var(--muted2);line-height:1.5">The degree of autonomy granted to the AI system — and inversely, the availability of meaningful human oversight. High reliance on AI output without human review requires stronger controls.</p>
+    </div>
+  </div>
+
+  <!-- GenAI & Agentic AI -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">GenAI & Agentic AI Requirements</div>
+      <div class="section-sub">MindForge specific guidance for emerging AI technologies</div>
+    </div>
+  </div>
+
+  <div class="insights-bar" style="margin-bottom:40px">
+    <div class="insight-panel">
+      <h3>Generative AI Controls</h3>
+      <ul>
+        <li>Hallucination detection and human review workflows for AI-generated outputs</li>
+        <li>Prompt injection prevention — adversarial input testing before deployment</li>
+        <li>Training data leakage safeguards — ensure PII and confidential data is not surfaced</li>
+        <li>Output filtering and content guardrails appropriate to the use case context</li>
+        <li>FEAT Transparency — disclosure to customers when interacting with GenAI</li>
+        <li>Human-in-the-loop mandatory for high-impact or regulated GenAI decisions</li>
+      </ul>
+    </div>
+    <div class="insight-panel">
+      <h3>Agentic AI Requirements</h3>
+      <ul>
+        <li>Define explicit action boundaries — what the agent can and cannot do autonomously</li>
+        <li>Safe action limits aligned with business objectives and risk appetite</li>
+        <li>Human escalation protocols with clear trigger conditions</li>
+        <li>Real-time intervention capability — kill-switch and circuit breaker mechanisms</li>
+        <li>Audit trail for every autonomous action with rationale and alternatives considered</li>
+        <li>Multi-agent systems: individual materiality assessment for each agent in the system</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Maturity Stage Mapping -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">MindForge Compliance by Maturity Stage</div>
+      <div class="section-sub">How MindForge obligations scale with your AI adoption stage</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:40px;padding:0">
+    <div style="padding:0 24px">
+
+      <div class="stage-map-row">
+        <div>
+          <span class="stage-badge stage-1">Stage 1</span>
+          <div style="font-size:12px;color:var(--muted);margin-top:6px">Exploring</div>
+        </div>
+        <div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:6px">MindForge Baseline: Governance Foundations</div>
+          <p style="font-size:13px;color:var(--muted2);line-height:1.5">Conduct gap assessment against all 17 Considerations. Establish board-level AI risk appetite statement. Create initial AI inventory (even a spreadsheet). Begin FEAT principles awareness training. Assign AI risk owner in 2nd line.</p>
+        </div>
+      </div>
+
+      <div class="stage-map-row">
+        <div>
+          <span class="stage-badge stage-2">Stage 2</span>
+          <div style="font-size:12px;color:var(--muted);margin-top:6px">Experimenting</div>
+        </div>
+        <div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:6px">MindForge Core: Policies, Inventory, Lifecycle Controls</div>
+          <p style="font-size:13px;color:var(--muted2);line-height:1.5">Implement AI governance policies (Consideration 2). Formalize AI inventory with materiality classifications (Consideration 6). Apply materiality assessment to all pilots. Run FEAT-aligned bias testing. Establish pre-deployment testing gates (Consideration 12). Begin 3LoD integration.</p>
+        </div>
+      </div>
+
+      <div class="stage-map-row">
+        <div>
+          <span class="stage-badge stage-3">Stage 3</span>
+          <div style="font-size:12px;color:var(--muted);margin-top:6px">Scaling</div>
+        </div>
+        <div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:6px">MindForge Operationalized: All 17 Considerations Active</div>
+          <p style="font-size:13px;color:var(--muted2);line-height:1.5">All 17 Considerations mapped to documented controls. Automated FEAT fairness monitoring via Veritas. AI Verify toolkit integrated into CI/CD pipeline. GenAI-specific controls deployed. Third-party AI risk program active (Considerations 4 & 10). Board-level AI risk reporting quarterly.</p>
+        </div>
+      </div>
+
+      <div class="stage-map-row">
+        <div>
+          <span class="stage-badge stage-4">Stage 4</span>
+          <div style="font-size:12px;color:var(--muted);margin-top:6px">Transforming</div>
+        </div>
+        <div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:6px">MindForge Leadership: Agentic AI, Standards Shaping</div>
+          <p style="font-size:13px;color:var(--muted2);line-height:1.5">Full agentic AI governance framework deployed. Participating in MAS BuildFin.ai workgroup shaping next-generation MindForge standards. Annual independent MindForge compliance review. Published AI transparency report. MindForge-certified AI platform offered to peers.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tools -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">MAS Supporting Tools & Initiatives</div>
+      <div class="section-sub">Open-source frameworks published by MAS to help institutions implement MindForge</div>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-bottom:40px">
+    <div class="tool-card">
+      <h4>Veritas Initiative</h4>
+      <p>Provides FEAT assessment methodology, fairness metrics libraries, and templates for operationalizing the Fairness principle in credit, marketing, and customer service AI. Free toolkit published by MAS.</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--accent2)">→ FEAT Fairness measurement</div>
+    </div>
+    <div class="tool-card">
+      <h4>AI Verify Toolkit</h4>
+      <p>Open-source testing framework for assessing AI models on fairness, transparency, and robustness. Generates standardized test reports for regulatory submission. Developed by IMDA and MAS.</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--accent2)">→ MindForge Consideration 12</div>
+    </div>
+    <div class="tool-card">
+      <h4>MindForge Operationalisation Handbook</h4>
+      <p>Detailed practical guidance on implementing each of the 17 Considerations, with case studies from 24 consortium institutions. Includes templates, tools, and worked examples.</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--accent2)">→ mas.gov.sg/project-mindforge</div>
+    </div>
+    <div class="tool-card">
+      <h4>BuildFin.ai Workgroup</h4>
+      <p>MAS-convened workgroup developing next-generation AI risk management standards, with initial focus on agentic AI governance. Open to MindForge consortium members and invited industry experts.</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--accent2)">→ Stage 4 engagement</div>
+    </div>
+    <div class="tool-card">
+      <h4>MAS Regulatory Sandbox</h4>
+      <p>Fast-track regulatory environment for testing novel AI financial products and services under MAS supervision. Allows pre-clearance of innovative AI approaches with reduced regulatory risk.</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--accent2)">→ Agentic AI / novel use cases</div>
+    </div>
+    <div class="tool-card">
+      <h4>FEAT Self-Assessment Guide</h4>
+      <p>MAS-published guide helping institutions self-assess their AI systems against each FEAT principle. Structured questionnaire format with scoring guidance and remediation recommendations.</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--accent2)">→ FEAT Principles implementation</div>
+    </div>
+  </div>
+
+  <!-- Compliance Timeline -->
+  <div class="section-header" style="margin-bottom:20px">
+    <div>
+      <div class="section-title">Compliance Timeline</div>
+      <div class="section-sub">Key dates for MAS MindForge and AI Risk Management Guidelines</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:40px;padding:16px 24px">
+    <div class="timeline-item">
+      <div class="timeline-dot">1</div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--text)">May 2024 — MindForge Phase 1 Whitepaper</div>
+        <div style="font-size:12px;color:var(--muted2);margin-top:3px">MAS published Phase 1 whitepaper on GenAI risks and opportunities for banks.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">2</div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--text)">November 2025 — MAS AI Risk Management Guidelines Consultation</div>
+        <div style="font-size:12px;color:var(--muted2);margin-top:3px">MAS issued consultation paper proposing binding AI Risk Management Guidelines for all regulated entities. Consultation closed January 31, 2026.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">3</div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--text)">March 2026 — MindForge Phase 2 Toolkit Published</div>
+        <div style="font-size:12px;color:var(--muted2);margin-top:3px">MAS announced completion of Phase 2. Full AI Risk Management Toolkit published: Executive Handbook, Operationalisation Handbook, and Case Studies supplement. Developed by consortium of 24 institutions.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">4</div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--text)">2026 — MAS AI Risk Management Guidelines Promulgated</div>
+        <div style="font-size:12px;color:var(--muted2);margin-top:3px">Final guidelines expected to be promulgated. 12-month transition period begins for all MAS-regulated financial institutions to achieve full compliance.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">5</div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--accent2)">2027 — Full Compliance Required</div>
+        <div style="font-size:12px;color:var(--muted2);margin-top:3px">End of 12-month transition period. All 17 MindForge Considerations must be operationalized across all AI systems in scope. MAS examinations will assess compliance.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">→</div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--purple)">Ongoing — Agentic AI Standards (BuildFin.ai)</div>
+        <div style="font-size:12px;color:var(--muted2);margin-top:3px">MAS BuildFin.ai workgroup developing agentic AI governance framework. Expected to result in a supplement or revision to the MindForge toolkit. Stage 4 institutions should engage now.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="card" style="text-align:center;padding:40px;border-color:var(--accent);background:linear-gradient(135deg,#0f1f3d,#111827)">
+    <div style="font-size:18px;font-weight:600;color:var(--text);margin-bottom:10px">
+      Where does your institution stand on MindForge readiness?
+    </div>
+    <p style="color:var(--muted2);font-size:14px;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">
+      The self-assessment now includes MindForge-specific questions across FEAT principles, AI inventory, materiality assessment, GenAI controls, three lines of defence, and agentic AI governance.
+    </p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="assessment.html" class="btn btn-primary btn-lg">Take the Assessment →</a>
+      <a href="playbook.html" class="btn btn-secondary">View My Playbook</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div>
+    Sources: <a href="https://www.mas.gov.sg/schemes-and-initiatives/project-mindforge" target="_blank">MAS Project MindForge</a> ·
+    <a href="https://www.mas.gov.sg/news/media-releases/2025/mas-guidelines-for-artificial-intelligence-risk-management" target="_blank">MAS AI Risk Management Guidelines (2025)</a> ·
+    <a href="https://www.mas.gov.sg/news/media-releases/2026/mas-partners-industry-to-develop-ai-risk-management-toolkit-for-the-financial-sector" target="_blank">MAS MindForge Toolkit (2026)</a>
+  </div>
+  <div>Not legal or regulatory advice. Consult qualified legal counsel for compliance guidance specific to your institution.</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
